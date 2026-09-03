@@ -205,16 +205,19 @@
       </div>
     </section>
 
+    ```html
     <!-- ============================================
-         PROJETOS
-    ============================================= -->
+     PROJETOS
+============================================ -->
 
     <section id="projetos" class="section projetos-section">
       <div class="container">
-        <div class="section-heading">
-          <span class="section-label"> Portfólio </span>
+        <!-- CABEÇALHO DA SEÇÃO -->
 
-          <h2 class="section-title">Projetos</h2>
+        <div class="section-heading">
+          <span class="section-label">Portfólio</span>
+
+          <h2 class="section-title">Projetos em destaque</h2>
 
           <p class="section-subtitle">
             Projetos desenvolvidos durante minha formação em Desenvolvimento de
@@ -222,124 +225,151 @@
           </p>
         </div>
 
-        <!--
-          ESTRUTURA DOS CARDS
+        <!-- ============================================
+             PROJETO PRINCIPAL
+        ============================================= -->
 
-          Quando você tiver os projetos, cada card poderá conter:
-
-          1. Imagem do projeto
-          2. Status
-          3. Nome
-          4. Descrição
-          5. Tecnologias
-          6. Link para demonstração
-          7. Link para GitHub
-        -->
-
-        <div class="projetos-grid">
-          <!-- =====================================
-               PROJETO 1
-          ====================================== -->
-
-          <!-- ============================================
-     PROJETOS
-============================================ -->
-
-<section id="projetos" class="section">
-    <div class="container">
-        <div class="section-heading">
-            <span class="section-label">Portfólio</span>
-            <h2 class="section-title">Projetos em destaque</h2>
-            <p class="section-subtitle">
-                Projetos desenvolvidos durante minha formação em Desenvolvimento de Software Multiplataforma.
-            </p>
-        </div>
-
-        <!-- PROJETO PRINCIPAL -->
         <article class="project-card">
-            <div class="project-image">
-                <!-- Substituir por: <img src="..." alt="ScrumFlow"> -->
-                <div class="project-image-placeholder">ScrumFlow</div>
+          <!-- IMAGEM / PREVIEW -->
+
+          <div class="project-image">
+            <!--
+                    Quando tiver a imagem, substitua o conteúdo
+                    abaixo por:
+
+                    <img
+                        src="assets/img/scrumflow.jpg"
+                        alt="Tela do projeto ScrumFlow"
+                    >
+                -->
+
+            <div class="project-image-placeholder">ScrumFlow</div>
+          </div>
+
+          <!-- CONTEÚDO -->
+
+          <div class="project-content">
+            <span class="project-type"> Projeto acadêmico · FATEC </span>
+
+            <h3>ScrumFlow</h3>
+
+            <p>
+              Portal web de certificação interna em metodologias ágeis,
+              desenvolvido em equipe durante o primeiro semestre de
+              Desenvolvimento de Software Multiplataforma.
+            </p>
+
+            <!-- TECNOLOGIAS -->
+
+            <div class="project-tech">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>PostgreSQL</span>
+              <span>JWT</span>
             </div>
 
-            <div class="project-content">
-                <span class="project-type">Projeto acadêmico · FATEC</span>
-                <h3>ScrumFlow</h3>
-                <p>
-                    Portal web de certificação interna em metodologias ágeis,
-                    desenvolvido em equipe durante o primeiro semestre de
-                    Desenvolvimento de Software Multiplataforma.
-                </p>
+            <!-- AÇÕES -->
 
-                <div class="project-tech">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>PostgreSQL</span>
-                    <span>JWT</span>
-                </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/mparise28-dev/ABP1-scrum-flow"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Ver projeto
+              </a>
 
-                <div class="project-actions">
-                    <a href="#" class="btn btn-primary">Ver projeto</a>
-                    <a href="#" class="btn btn-secondary">GitHub</a>
-                </div>
+              <a
+                href="https://github.com/mparise28-dev/ABP1-scrum-flow"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                GitHub
+              </a>
             </div>
+          </div>
         </article>
 
-        <!-- PROJETOS SECUNDÁRIOS -->
-        <div class="projetos-secundarios">
-            <!-- Projeto 2 -->
-            <article class="projeto-card">
-                <div class="projeto-image">
-                    <div class="projeto-image-placeholder">Em breve</div>
-                </div>
-                <div class="projeto-content">
-                    <span class="projeto-status">Projeto acadêmico</span>
-                    <h3>Projeto 02</h3>
-                    <p>
-                        Descrição do projeto será adicionada aqui, apresentando o
-                        problema, a solução desenvolvida e os principais recursos
-                        implementados.
-                    </p>
-                    <div class="projeto-tecnologias">
-                        <span>Python</span>
-                        <span>Flask</span>
-                    </div>
-                    <div class="projeto-links">
-                        <a href="#" class="btn btn-small">Ver projeto</a>
-                        <a href="#" class="btn-link">GitHub →</a>
-                    </div>
-                </div>
-            </article>
+        <!-- ============================================
+             PROJETOS SECUNDÁRIOS
+        ============================================= -->
 
-            <!-- Projeto 3 -->
-            <article class="projeto-card">
-                <div class="projeto-image">
-                    <div class="projeto-image-placeholder">Em breve</div>
-                </div>
-                <div class="projeto-content">
-                    <span class="projeto-status">Projeto acadêmico</span>
-                    <h3>Projeto 03</h3>
-                    <p>
-                        Descrição do projeto será adicionada aqui, apresentando o
-                        problema, a solução desenvolvida e os principais recursos
-                        implementados.
-                    </p>
-                    <div class="projeto-tecnologias">
-                        <span>Node.js</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="projeto-links">
-                        <a href="#" class="btn btn-small">Ver projeto</a>
-                        <a href="#" class="btn-link">GitHub →</a>
-                    </div>
-                </div>
-            </article>
+        <div class="projetos-secundarios">
+          <!-- ========================================
+                 PROJETO 2
+            ========================================= -->
+
+          <article class="projeto-card">
+            <div class="projeto-image">
+              <div class="projeto-image-placeholder">Em breve</div>
+            </div>
+
+            <div class="projeto-content">
+              <span class="projeto-status"> Projeto acadêmico </span>
+
+              <h3>Projeto 02</h3>
+
+              <p>
+                Descrição do projeto será adicionada aqui, apresentando o
+                problema, a solução desenvolvida e os principais recursos
+                implementados.
+              </p>
+
+              <div class="projeto-tecnologias">
+                <span>Python</span>
+                <span>Flask</span>
+              </div>
+
+              <div class="projeto-links">
+                <a href="#" class="btn btn-small"> Ver projeto </a>
+
+                <a href="#" class="btn-link"> GitHub → </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========================================
+                 PROJETO 3
+            ========================================= -->
+
+          <article class="projeto-card">
+            <div class="projeto-image">
+              <div class="projeto-image-placeholder">Em breve</div>
+            </div>
+
+            <div class="projeto-content">
+              <span class="projeto-status"> Projeto acadêmico </span>
+
+              <h3>Projeto 03</h3>
+
+              <p>
+                Descrição do projeto será adicionada aqui, apresentando o
+                problema, a solução desenvolvida e os principais recursos
+                implementados.
+              </p>
+
+              <div class="projeto-tecnologias">
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+              </div>
+
+              <div class="projeto-links">
+                <a href="#" class="btn btn-small"> Ver projeto </a>
+
+                <a href="#" class="btn-link"> GitHub → </a>
+              </div>
+            </div>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
+    ```
+
     <!-- ============================================
          FORMAÇÃO
     ============================================= -->
