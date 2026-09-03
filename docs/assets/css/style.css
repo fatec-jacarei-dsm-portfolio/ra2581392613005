@@ -625,11 +625,7 @@ img {
 }
 
 /* ============================================
-   PROJETOS
-============================================ */
-
-/* ============================================
-   PROJETOS
+   PROJETOS - PRINCIPAL
 ============================================ */
 
 #projetos {
@@ -639,7 +635,7 @@ img {
 .project-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 420px;
+  min-height: 400px;
   overflow: hidden;
 
   border: 1px solid var(--border);
@@ -649,19 +645,20 @@ img {
   box-shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
 
   transition: var(--transition);
+  margin-bottom: 40px;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.10);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
 }
 
 /* ============================================
-   IMAGEM DO PROJETO
+   IMAGEM DO PROJETO PRINCIPAL
 ============================================ */
 
 .project-image {
-  min-height: 420px;
+  min-height: 400px;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 
   display: flex;
@@ -671,18 +668,15 @@ img {
   overflow: hidden;
 }
 
-/* Espaço temporário enquanto não temos a imagem */
-
-.project-image::before {
-  content: "ScrumFlow";
+/* Placeholder para imagem do projeto principal */
+.project-image-placeholder {
   color: #64748b;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 /* Quando colocarmos a imagem */
-
 .project-image img {
   width: 100%;
   height: 100%;
@@ -696,7 +690,7 @@ img {
 }
 
 /* ============================================
-   CONTEÚDO DO PROJETO
+   CONTEÚDO DO PROJETO PRINCIPAL
 ============================================ */
 
 .project-content {
@@ -737,7 +731,7 @@ img {
 }
 
 /* ============================================
-   TECNOLOGIAS
+   TECNOLOGIAS DO PROJETO PRINCIPAL
 ============================================ */
 
 .project-tech {
@@ -762,7 +756,7 @@ img {
 }
 
 /* ============================================
-   BOTÕES DO PROJETO
+   BOTÕES DO PROJETO PRINCIPAL
 ============================================ */
 
 .project-actions {
@@ -775,6 +769,159 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ============================================
+   PROJETOS SECUNDÁRIOS
+============================================ */
+
+.projetos-secundarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+
+  margin-top: 40px;
+}
+
+.projeto-card {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  background: var(--white);
+
+  transition: var(--transition);
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #bfdbfe;
+
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+}
+
+/* ============================================
+   IMAGEM DO PROJETO SECUNDÁRIO
+============================================ */
+
+.projeto-image {
+  width: 100%;
+  height: 180px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projeto-image-placeholder {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ============================================
+   CONTEÚDO DO PROJETO SECUNDÁRIO
+============================================ */
+
+.projeto-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 25px;
+}
+
+.projeto-status {
+  display: inline-block;
+  width: fit-content;
+
+  margin-bottom: 12px;
+
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.projeto-card h3 {
+  color: var(--dark);
+
+  font-size: 22px;
+
+  margin-bottom: 10px;
+}
+
+.projeto-card p {
+  color: var(--text-muted);
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* ============================================
+   TECNOLOGIAS DO PROJETO SECUNDÁRIO
+============================================ */
+
+.projeto-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.projeto-tecnologias span {
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background: #f1f5f9;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ============================================
+   LINKS DO PROJETO SECUNDÁRIO
+============================================ */
+
+.projeto-links {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.btn-link {
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.btn-link:hover {
+  color: var(--primary);
 }
 
 /* ============================================
@@ -1010,10 +1157,6 @@ img {
   .habilidades-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .projetos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* ============================================
@@ -1103,25 +1246,32 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 
-  .projetos-grid {
+  /* ===== PROJETOS - RESPONSIVIDADE ===== */
+  .project-card {
     grid-template-columns: 1fr;
   }
 
-  .project-card {
-  grid-template-columns: 1fr;
-}
+  .project-image {
+    min-height: 280px;
+  }
 
-.project-image {
-  min-height: 280px;
-}
+  .project-content {
+    padding: 35px;
+  }
 
-.project-content {
-  padding: 35px;
-}
+  .project-content h3 {
+    font-size: 30px;
+  }
 
-.project-content h3 {
-  font-size: 30px;
-}
+  .projetos-secundarios {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   .formacao-card {
     grid-template-columns: 1fr;
@@ -1134,19 +1284,7 @@ img {
 
     gap: 45px;
   }
-.projetos-secundarios {
-  grid-template-columns: 1fr;
 }
-
-.projeto-card {
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-}
-
-
 
 /* ============================================
    RESPONSIVIDADE — CELULAR PEQUENO
@@ -1187,6 +1325,28 @@ img {
     font-size: 29px;
   }
 
+  /* ===== PROJETOS - RESPONSIVIDADE CELULAR PEQUENO ===== */
+  .project-content {
+    padding: 28px 22px;
+  }
+
+  .project-content h3 {
+    font-size: 27px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+  }
+
+  .projeto-content {
+    padding: 22px;
+  }
+
   .formacao-card {
     padding: 25px;
   }
@@ -1198,181 +1358,4 @@ img {
   .contato-box {
     padding: 28px 22px;
   }
-}
-
-.project-content {
-  padding: 28px 22px;
-}
-
-.project-content h3 {
-  font-size: 27px;
-}
-
-.project-actions {
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.project-actions .btn {
-  width: 100%;
-}
-
-/* ============================================
-   PROJETOS SECUNDÁRIOS
-============================================ */
-
-.projetos-secundarios {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-
-  margin-top: 35px;
-}
-
-.projeto-card {
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-
-  background: var(--white);
-
-  transition: var(--transition);
-}
-
-.projeto-card:hover {
-  transform: translateY(-5px);
-
-  border-color: #bfdbfe;
-
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
-}
-
-
-/* ============================================
-   IMAGEM
-============================================ */
-
-.projeto-image {
-  width: 100%;
-  height: 180px;
-
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-}
-
-.projeto-image-placeholder {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #64748b;
-
-  font-size: 14px;
-  font-weight: 600;
-}
-
-
-/* ============================================
-   CONTEÚDO
-============================================ */
-
-.projeto-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
-  padding: 25px;
-}
-
-.projeto-status {
-  display: inline-block;
-  width: fit-content;
-
-  margin-bottom: 12px;
-
-  color: var(--primary);
-
-  font-size: 11px;
-  font-weight: 700;
-
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.projeto-card h3 {
-  color: var(--dark);
-
-  font-size: 22px;
-
-  margin-bottom: 10px;
-}
-
-.projeto-card p {
-  color: var(--text-muted);
-
-  font-size: 14px;
-  line-height: 1.6;
-
-  margin-bottom: 20px;
-}
-
-
-/* ============================================
-   TECNOLOGIAS
-============================================ */
-
-.projeto-tecnologias {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 7px;
-
-  margin-top: auto;
-  margin-bottom: 20px;
-}
-
-.projeto-tecnologias span {
-  padding: 5px 9px;
-
-  border-radius: 6px;
-
-  background: #f1f5f9;
-
-  color: var(--text-secondary);
-
-  font-size: 11px;
-  font-weight: 600;
-}
-
-
-/* ============================================
-   LINKS
-============================================ */
-
-.projeto-links {
-  display: flex;
-  align-items: center;
-
-  gap: 16px;
-}
-
-.btn-link {
-  color: var(--text-secondary);
-
-  font-size: 13px;
-  font-weight: 700;
-
-  transition: var(--transition);
-}
-
-.btn-link:hover {
-  color: var(--primary);
 }
