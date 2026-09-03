@@ -1349,128 +1349,211 @@ gap: 14px;
 }
 
 /* ============================================
-PROJETO 1 — SCRUMFLOW
-============================================= */
+   PROJETO 1 — SCRUMFLOW
+   ============================================ */
 
-.projeto-card {
-background: #ffffff;
-border-radius: 16px;
-overflow: hidden;
-border: 1px solid #e5e7eb;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-card {
+  display: grid;
+  grid-template-columns: 42% 58%;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  margin-top: 35px;
 }
 
-.projeto-card:hover {
-transform: translateY(-6px);
-box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+.project-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.12);
 }
 
-/* Área da imagem */
 
-.projeto-image {
-height: 240px;
-background: #111827;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
+/* ============================================
+   IMAGEM
+   ============================================ */
+
+.project-image {
+  min-height: 360px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #1f2937
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
-.projeto-image-placeholder {
-color: #ffffff;
-font-size: 2rem;
-font-weight: 700;
-letter-spacing: 0.5px;
+/* Quando colocarmos a imagem real */
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
 }
 
-/* Conteúdo */
 
-.projeto-content {
-padding: 28px;
+/* ============================================
+   CONTEÚDO
+   ============================================ */
+
+.project-content {
+  padding: 42px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.projeto-status {
-display: inline-block;
-margin-bottom: 12px;
-font-size: 0.8rem;
-font-weight: 600;
-color: #2563eb;
-text-transform: uppercase;
-letter-spacing: 0.5px;
+
+/* Tipo do projeto */
+
+.project-type {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #2563eb;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-.projeto-content h3 {
-margin: 0 0 12px;
-font-size: 1.8rem;
-color: #111827;
+
+/* Título */
+
+.project-content h3 {
+  margin: 0 0 16px;
+
+  color: #111827;
+
+  font-size: 2.2rem;
+  line-height: 1.15;
 }
 
-.projeto-content p {
-margin: 0 0 22px;
-color: #4b5563;
-line-height: 1.7;
+
+/* Descrição */
+
+.project-content p {
+  margin: 0 0 25px;
+
+  color: #4b5563;
+
+  font-size: 1rem;
+  line-height: 1.75;
+
+  max-width: 620px;
 }
 
-/* Tecnologias */
 
-.projeto-tecnologias {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-bottom: 24px;
+/* ============================================
+   TECNOLOGIAS
+   ============================================ */
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 30px;
 }
 
-.projeto-tecnologias span {
-padding: 6px 11px;
-border-radius: 6px;
-background: #f3f4f6;
-color: #374151;
-font-size: 0.8rem;
-font-weight: 600;
+.project-tech span {
+  padding: 7px 11px;
+
+  background: #f3f4f6;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 6px;
+
+  color: #374151;
+
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
-/* Links */
 
-.projeto-links {
-display: flex;
-align-items: center;
-gap: 20px;
+/* ============================================
+   BOTÕES
+   ============================================ */
+
+.project-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
 }
 
-.projeto-links .btn-small {
-text-decoration: none;
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 900px) {
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    min-height: 280px;
+  }
+
+  .project-content {
+    padding: 30px;
+  }
+
+  .project-content h3 {
+    font-size: 1.8rem;
+  }
 }
 
-.projeto-links .btn-link {
-color: #2563eb;
-font-weight: 600;
-text-decoration: none;
-transition: color 0.2s ease;
-}
 
-.projeto-links .btn-link:hover {
-color: #1d4ed8;
-}
+@media (max-width: 600px) {
 
-/* Responsividade */
+  .project-image {
+    min-height: 220px;
+  }
 
-@media (max-width: 768px) {
-.projeto-image {
-height: 200px;
-}
+  .project-content {
+    padding: 24px;
+  }
 
-.projeto-content {
-padding: 22px;
-}
+  .project-content h3 {
+    font-size: 1.6rem;
+  }
 
-.projeto-content h3 {
-font-size: 1.5rem;
-}
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-.projeto-links {
-flex-direction: column;
-align-items: flex-start;
-gap: 14px;
-}
+  .project-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
