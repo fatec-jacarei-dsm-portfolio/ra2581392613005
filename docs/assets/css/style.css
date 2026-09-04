@@ -126,7 +126,6 @@ img {
   position: relative;
 
   color: #cbd5e1;
-
   font-size: 14px;
   font-weight: 500;
 
@@ -213,7 +212,6 @@ img {
 .hero h1 {
   font-size: clamp(38px, 5vw, 58px);
   line-height: 1.08;
-
   font-weight: 800;
   letter-spacing: -2px;
 
@@ -225,7 +223,6 @@ img {
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   background-clip: text;
 }
 
@@ -295,11 +292,11 @@ img {
 
 .btn {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   min-height: 48px;
+
   padding: 0 24px;
 
   border-radius: 10px;
@@ -403,9 +400,7 @@ img {
   font-size: clamp(30px, 4vw, 40px);
 
   line-height: 1.2;
-
   font-weight: 800;
-
   letter-spacing: -1px;
 
   margin-bottom: 15px;
@@ -413,7 +408,6 @@ img {
 
 .section-subtitle {
   color: var(--text-muted);
-
   font-size: 17px;
 }
 
@@ -449,7 +443,6 @@ img {
 
 .sobre-detalhes {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 10px;
@@ -516,7 +509,6 @@ img {
   color: #cbd5e1;
 
   font-size: 14px;
-
   line-height: 1.6;
 }
 
@@ -594,7 +586,6 @@ img {
 
 .tecnologias {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 7px;
@@ -622,15 +613,13 @@ img {
 }
 
 /* ============================================
-   PROJETO PRINCIPAL — SCRUMFLOW
+   ESTRUTURA GERAL DOS PROJETOS
 ============================================ */
 
 .project-card {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
-
-  min-height: 400px;
 
   overflow: hidden;
 
@@ -654,7 +643,28 @@ img {
 }
 
 /* ============================================
-   IMAGEM DO SCRUMFLOW
+   PROJETO 01 — SCRUMFLOW
+   PROJETO PRINCIPAL
+============================================ */
+
+.project-card-featured {
+  min-height: 400px;
+}
+
+.project-card-featured .project-image {
+  min-height: 400px;
+}
+
+.project-card-featured .project-content {
+  padding: 45px;
+}
+
+.project-card-featured .project-content h3 {
+  font-size: 34px;
+}
+
+/* ============================================
+   IMAGENS DOS PROJETOS
 ============================================ */
 
 .project-image {
@@ -667,15 +677,6 @@ img {
   overflow: hidden;
 
   background: linear-gradient(135deg, #0f172a, #1e293b);
-}
-
-.project-image-placeholder {
-  color: #64748b;
-
-  font-size: 24px;
-  font-weight: 700;
-
-  letter-spacing: 1px;
 }
 
 .project-image img {
@@ -691,8 +692,17 @@ img {
   transform: scale(1.04);
 }
 
+.project-image-placeholder {
+  color: #64748b;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
 /* ============================================
-   CONTEÚDO DO SCRUMFLOW
+   CONTEÚDO DOS PROJETOS
 ============================================ */
 
 .project-content {
@@ -716,7 +726,6 @@ img {
   font-weight: 700;
 
   text-transform: uppercase;
-
   letter-spacing: 0.6px;
 }
 
@@ -743,10 +752,10 @@ img {
 }
 
 /* ============================================
-   TECNOLOGIAS DO SCRUMFLOW
+   TECNOLOGIAS DOS PROJETOS
 ============================================ */
 
-.project-tech {
+.project-technologies {
   display: flex;
 
   flex-wrap: wrap;
@@ -756,7 +765,7 @@ img {
   margin-bottom: 30px;
 }
 
-.project-tech span {
+.project-technologies span {
   padding: 6px 10px;
 
   border: 1px solid var(--border);
@@ -772,7 +781,7 @@ img {
 }
 
 /* ============================================
-   MINHA CONTRIBUIÇÃO — SCRUMFLOW
+   MINHA CONTRIBUIÇÃO
 ============================================ */
 
 .project-contribution {
@@ -839,7 +848,7 @@ img {
 }
 
 /* ============================================
-   BOTÕES DO SCRUMFLOW
+   BOTÕES DOS PROJETOS
 ============================================ */
 
 .project-actions {
@@ -857,11 +866,8 @@ img {
   justify-content: center;
 }
 
-/*
-   Correção do botão secundário no card branco.
-   O .btn-secondary global foi pensado para
-   fundos escuros.
-*/
+/* Corrige botão secundário dentro
+   dos cards brancos */
 
 .project-actions .btn-secondary {
   color: var(--text-secondary);
@@ -885,13 +891,15 @@ img {
 ============================================ */
 
 .project-card-secondary {
-  max-width: 900px;
+  width: 88%;
+
+  max-width: 1000px;
+
   min-height: 0;
+
   margin: 0 auto 40px;
 
-  grid-template-columns: 0.9fr 1.1fr;
-
-  overflow: hidden;
+  grid-template-columns: 0.85fr 1.15fr;
 }
 
 /* ============================================
@@ -899,12 +907,13 @@ img {
 ============================================ */
 
 .project-card-secondary .project-image {
-  min-height: 320px;
+  min-height: 300px;
 }
 
 .project-card-secondary .project-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
@@ -913,24 +922,29 @@ img {
 ============================================ */
 
 .project-card-secondary .project-content {
-  padding: 32px;
+  padding: 30px;
 }
 
 .project-card-secondary .project-type {
-  margin-bottom: 12px;
-  font-size: 11px;
+  margin-bottom: 10px;
+
+  font-size: 10px;
 }
 
 .project-card-secondary .project-content h3 {
-  margin-bottom: 12px;
-  font-size: 28px;
+  margin-bottom: 10px;
+
+  font-size: 27px;
 }
 
 .project-card-secondary .project-content > p {
-  max-width: 500px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 1.6;
+  max-width: 480px;
+
+  margin-bottom: 18px;
+
+  font-size: 13px;
+
+  line-height: 1.55;
 }
 
 /* ============================================
@@ -938,53 +952,49 @@ img {
 ============================================ */
 
 .project-card-secondary .project-technologies {
-  display: flex;
-  flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 22px;
+
+  margin-bottom: 18px;
 }
 
 .project-card-secondary .project-technologies span {
-  padding: 5px 8px;
-
-  border: 1px solid var(--border);
-  border-radius: 6px;
-
-  background: var(--background);
-  color: var(--text-secondary);
+  padding: 4px 7px;
 
   font-size: 10px;
-  font-weight: 600;
 }
 
 /* ============================================
-   MINHA CONTRIBUIÇÃO — DDD EXPLORER
+   CONTRIBUIÇÃO — DDD EXPLORER
 ============================================ */
 
 .project-card-secondary .project-contribution {
-  margin-bottom: 22px;
-  padding: 18px;
+  margin-bottom: 18px;
+
+  padding: 16px;
 
   border-radius: 12px;
 }
 
 .project-card-secondary .project-contribution-label {
-  margin-bottom: 12px;
-  font-size: 12px;
+  margin-bottom: 10px;
+
+  font-size: 11px;
 }
 
 .project-card-secondary .contribution-item {
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .project-card-secondary .contribution-item strong {
-  margin-bottom: 3px;
-  font-size: 12px;
+  margin-bottom: 2px;
+
+  font-size: 11px;
 }
 
 .project-card-secondary .contribution-item p {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 11px;
+
+  line-height: 1.45;
 }
 
 /* ============================================
@@ -992,53 +1002,15 @@ img {
 ============================================ */
 
 .project-card-secondary .project-actions {
-  gap: 10px;
+  gap: 8px;
 }
 
 .project-card-secondary .project-actions .btn {
-  padding: 10px 16px;
+  min-height: 42px;
+
+  padding: 0 17px;
+
   font-size: 12px;
-}
-
-/* ============================================
-   RESPONSIVIDADE — DDD EXPLORER
-============================================ */
-
-@media (max-width: 900px) {
-  .project-card-secondary {
-    grid-template-columns: 1fr;
-    max-width: 700px;
-  }
-
-  .project-card-secondary .project-image {
-    min-height: 280px;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-card-secondary {
-    margin-bottom: 30px;
-  }
-
-  .project-card-secondary .project-image {
-    min-height: 220px;
-  }
-
-  .project-card-secondary .project-content {
-    padding: 24px;
-  }
-
-  .project-card-secondary .project-content h3 {
-    font-size: 25px;
-  }
-
-  .project-card-secondary .project-content > p {
-    font-size: 13px;
-  }
-
-  .project-card-secondary .project-contribution {
-    padding: 15px;
-  }
 }
 
 /* ============================================
@@ -1252,6 +1224,7 @@ img {
   height: 36px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1348,6 +1321,10 @@ img {
 
   .project-content h3 {
     font-size: 30px;
+  }
+
+  .project-card-secondary {
+    width: 94%;
   }
 
   .cursos-grid {
@@ -1452,7 +1429,7 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* PROJETO PRINCIPAL */
+  /* PROJETOS */
 
   .project-card {
     grid-template-columns: 1fr;
@@ -1460,40 +1437,40 @@ img {
     margin-bottom: 30px;
   }
 
-  .project-image {
+  .project-card-featured .project-image {
     min-height: 280px;
   }
 
-  .project-content {
+  .project-card-featured .project-content {
     padding: 35px;
   }
 
-  .project-content h3 {
+  .project-card-featured .project-content h3 {
     font-size: 30px;
   }
 
-  /* MINHA CONTRIBUIÇÃO */
+  /* DDD EXPLORER */
+
+  .project-card-secondary {
+    width: 100%;
+
+    max-width: 650px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-secondary .project-image {
+    min-height: 240px;
+  }
+
+  .project-card-secondary .project-content {
+    padding: 30px;
+  }
+
+  /* CONTRIBUIÇÃO */
 
   .project-contribution {
     padding: 20px;
-  }
-
-  /* PROJETOS SECUNDÁRIOS */
-
-  .projetos-secundarios {
-    grid-template-columns: 1fr;
-
-    gap: 22px;
-
-    margin-top: 30px;
-  }
-
-  .projeto-card {
-    max-width: 500px;
-
-    width: 100%;
-
-    margin: 0 auto;
   }
 
   /* FORMAÇÃO */
@@ -1572,13 +1549,13 @@ img {
     font-size: 29px;
   }
 
-  /* PROJETO PRINCIPAL */
+  /* PROJETOS */
 
-  .project-content {
+  .project-card-featured .project-content {
     padding: 28px 22px;
   }
 
-  .project-content h3 {
+  .project-card-featured .project-content h3 {
     font-size: 27px;
   }
 
@@ -1600,14 +1577,22 @@ img {
     font-size: 12.5px;
   }
 
-  /* PROJETOS SECUNDÁRIOS */
+  /* DDD EXPLORER */
 
-  .projeto-image {
-    height: 160px;
+  .project-card-secondary .project-image {
+    min-height: 200px;
   }
 
-  .projeto-content {
+  .project-card-secondary .project-content {
     padding: 22px;
+  }
+
+  .project-card-secondary .project-content h3 {
+    font-size: 25px;
+  }
+
+  .project-card-secondary .project-contribution {
+    padding: 15px;
   }
 
   /* CURSOS */
