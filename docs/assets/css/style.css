@@ -604,7 +604,6 @@ img {
   font-weight: 600;
 }
 
-
 /* ======================================================
    PROJETOS
    ====================================================== */
@@ -613,7 +612,6 @@ img {
   padding-top: 90px;
   padding-bottom: 90px;
 }
-
 
 /* ======================================================
    TÍTULO DA SEÇÃO
@@ -644,7 +642,6 @@ img {
   line-height: 1.7;
 }
 
-
 /* ======================================================
    CARD BASE
    ====================================================== */
@@ -668,9 +665,8 @@ img {
 .project-card:hover {
   transform: translateY(-5px);
 
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
-
 
 /* ======================================================
    IMAGEM
@@ -695,7 +691,6 @@ img {
 .project-card:hover .project-image img {
   transform: scale(1.03);
 }
-
 
 /* ======================================================
    PROJETO PRINCIPAL - SCRUMFLOW
@@ -731,7 +726,6 @@ img {
   line-height: 1.7;
 }
 
-
 /* ======================================================
    TIPO DO PROJETO
    ====================================================== */
@@ -750,7 +744,6 @@ img {
 
   opacity: 0.65;
 }
-
 
 /* ======================================================
    TECNOLOGIAS
@@ -777,7 +770,6 @@ img {
   font-size: 11px;
   font-weight: 600;
 }
-
 
 /* ======================================================
    CONTRIBUIÇÃO - SCRUMFLOW
@@ -817,7 +809,6 @@ img {
   line-height: 1.55;
 }
 
-
 /* ======================================================
    BOTÕES
    ====================================================== */
@@ -836,7 +827,6 @@ img {
   font-size: 12px;
 }
 
-
 /* ======================================================
    GRADE DOS PROJETOS SECUNDÁRIOS
    ====================================================== */
@@ -850,7 +840,6 @@ img {
 
   width: 100%;
 }
-
 
 /* ======================================================
    CARDS SECUNDÁRIOS
@@ -901,7 +890,6 @@ img {
   font-size: 10px;
 }
 
-
 /* ======================================================
    DESTAQUES DOS PROJETOS SECUNDÁRIOS
    ====================================================== */
@@ -939,7 +927,6 @@ img {
   line-height: 1.5;
 }
 
-
 /* ======================================================
    BOTÕES DOS CARDS SECUNDÁRIOS
    ====================================================== */
@@ -954,13 +941,11 @@ img {
   font-size: 11px;
 }
 
-
 /* ======================================================
    TABLET
    ====================================================== */
 
 @media (max-width: 1024px) {
-
   .project-card-featured {
     grid-template-columns: 1fr 1fr;
   }
@@ -972,21 +957,17 @@ img {
   .projects-grid {
     gap: 22px;
   }
-
 }
-
 
 /* ======================================================
    MOBILE
    ====================================================== */
 
 @media (max-width: 768px) {
-
   #projetos {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-
 
   /* ScrumFlow */
 
@@ -1011,7 +992,6 @@ img {
     font-size: 30px;
   }
 
-
   /* Projetos secundários */
 
   .projects-grid {
@@ -1024,16 +1004,13 @@ img {
     height: 220px;
     min-height: 220px;
   }
-
 }
-
 
 /* ======================================================
    CELULARES PEQUENOS
    ====================================================== */
 
 @media (max-width: 480px) {
-
   #projetos .section-heading {
     margin-bottom: 40px;
   }
@@ -1067,7 +1044,6 @@ img {
   .project-highlights {
     grid-template-columns: 1fr;
   }
-
 }
 
 /* ============================================
@@ -1486,176 +1462,502 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* PROJETOS */
+  /* ============================================
+   PROJETOS
+============================================ */
+
+  #projetos {
+    background: var(--background);
+  }
+
+  /* ============================================
+   PROJETO PRINCIPAL — SCRUMFLOW
+============================================ */
 
   .project-card {
-    grid-template-columns: 1fr;
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+
+    background: var(--white);
+
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
+
+    transition: var(--transition);
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+  }
+
+  /* ============================================
+   IMAGENS DOS PROJETOS
+============================================ */
+
+  .project-image {
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.04);
+  }
+
+  /* ============================================
+   SCRUMFLOW — PROJETO PRINCIPAL
+============================================ */
+
+  .project-card-featured {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 400px;
+
+    margin-bottom: 55px;
+  }
+
+  .project-card-featured .project-image {
+    min-height: 400px;
+  }
+
+  .project-card-featured .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 45px;
+  }
+
+  /* ============================================
+   CONTEÚDO DO PROJETO PRINCIPAL
+============================================ */
+
+  .project-type {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-bottom: 14px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  .project-content h3 {
+    margin-bottom: 15px;
+
+    color: var(--dark);
+
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .project-description {
+    color: var(--text-muted);
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ============================================
+   TECNOLOGIAS
+============================================ */
+
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
 
     margin-bottom: 30px;
   }
 
-  .project-card-featured .project-image {
-    min-height: 280px;
+  .project-technologies span {
+    padding: 6px 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    background: var(--background);
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+    font-weight: 600;
   }
 
-  .project-card-featured .project-content {
-    padding: 35px;
-  }
-
-  .project-card-featured .project-content h3 {
-    font-size: 30px;
-  }
-
-  /* DDD EXPLORER */
-
-  .project-card-secondary {
-    width: 100%;
-
-    max-width: 650px;
-
-    grid-template-columns: 1fr;
-  }
-
-  .project-card-secondary .project-image {
-    min-height: 240px;
-  }
-
-  .project-card-secondary .project-content {
-    padding: 30px;
-  }
-
-  /* CONTRIBUIÇÃO */
-
-  .project-contribution {
-    padding: 20px;
-  }
-
-  /* FORMAÇÃO */
-
-  .formacao-card {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-  }
-
-  /* CURSOS */
-
-  .cursos-complementares {
-    margin-top: 70px;
-  }
-
-  .cursos-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* CONTATO */
-
-  .contato-grid {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-  }
-}
-
-/* ============================================
-   RESPONSIVIDADE — CELULAR PEQUENO
+  /* ============================================
+   MINHA CONTRIBUIÇÃO — SCRUMFLOW
 ============================================ */
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 18px;
-  }
-
-  /* NAVBAR */
-
-  .nav-links {
-    gap: 11px;
-  }
-
-  /* HERO */
-
-  .hero h1 {
-    font-size: 34px;
-
-    letter-spacing: -1px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  /* BOTÕES */
-
-  .btn {
-    width: 100%;
-  }
-
-  /* HABILIDADES */
-
-  .habilidades-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* TÍTULOS */
-
-  .section-title {
-    font-size: 29px;
-  }
-
-  /* PROJETOS */
-
-  .project-card-featured .project-content {
-    padding: 28px 22px;
-  }
-
-  .project-card-featured .project-content h3 {
-    font-size: 27px;
-  }
-
-  .project-actions {
-    flex-direction: column;
-
-    align-items: stretch;
-  }
-
-  .project-actions .btn {
-    width: 100%;
-  }
-
   .project-contribution {
-    padding: 18px;
+    margin-bottom: 30px;
+
+    padding: 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background: var(--background);
+  }
+
+  .project-contribution-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .contribution-item {
+    padding: 13px 0;
+
+    border-top: 1px solid var(--border);
+  }
+
+  .contribution-item:first-of-type {
+    padding-top: 0;
+
+    border-top: none;
+  }
+
+  .contribution-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .contribution-item strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--text);
+
+    font-size: 13px;
   }
 
   .contribution-item p {
-    font-size: 12.5px;
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+    line-height: 1.6;
   }
 
-  /* DDD EXPLORER */
+  /* ============================================
+   BOTÕES DOS PROJETOS
+============================================ */
+
+  .project-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 5px;
+  }
+
+  .project-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*
+   Botão secundário dentro dos cards brancos.
+*/
+
+  .project-actions .btn-secondary {
+    color: var(--text-secondary);
+
+    border-color: var(--border);
+
+    background: var(--white);
+  }
+
+  .project-actions .btn-secondary:hover {
+    color: var(--primary);
+
+    border-color: var(--primary);
+
+    background: #eff6ff;
+  }
+
+  /* ============================================
+   GRADE DOS PROJETOS SECUNDÁRIOS
+============================================ */
+
+  .projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+  }
+
+  /* ============================================
+   CARDS SECUNDÁRIOS
+============================================ */
+
+  .project-card-secondary {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    margin: 0;
+  }
+
+  /* ============================================
+   IMAGEM — PROJETOS SECUNDÁRIOS
+============================================ */
 
   .project-card-secondary .project-image {
-    min-height: 200px;
+    width: 100%;
+
+    height: 190px;
+    min-height: 190px;
   }
 
+  /* ============================================
+   CONTEÚDO — PROJETOS SECUNDÁRIOS
+============================================ */
+
   .project-card-secondary .project-content {
-    padding: 22px;
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 24px;
+  }
+
+  .project-card-secondary .project-type {
+    margin-bottom: 9px;
+
+    font-size: 10px;
   }
 
   .project-card-secondary .project-content h3 {
-    font-size: 25px;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    line-height: 1.15;
   }
 
-  .project-card-secondary .project-contribution {
-    padding: 15px;
+  .project-card-secondary .project-description {
+    margin-bottom: 18px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+    line-height: 1.55;
   }
 
-  /* CURSOS */
+  /* ============================================
+   TECNOLOGIAS — PROJETOS SECUNDÁRIOS
+============================================ */
 
-  .cursos-grid {
-    grid-template-columns: 1fr;
+  .project-card-secondary .project-technologies {
+    gap: 6px;
+
+    margin-bottom: 18px;
+  }
+
+  .project-card-secondary .project-technologies span {
+    padding: 5px 8px;
+
+    font-size: 10px;
+  }
+
+  /* ============================================
+   DESTAQUES — PROJETOS SECUNDÁRIOS
+============================================ */
+
+  .project-highlights {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+  }
+
+  .project-highlight {
+    padding: 12px;
+
+    border-radius: 9px;
+
+    background: var(--background-secondary);
+  }
+
+  .project-highlight strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--text);
+
+    font-size: 11px;
+  }
+
+  .project-highlight p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  /* ============================================
+   BOTÕES — PROJETOS SECUNDÁRIOS
+============================================ */
+
+  .project-card-secondary .project-actions {
+    margin-top: auto;
+
+    padding-top: 5px;
+  }
+
+  .project-card-secondary .project-actions .btn {
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    font-size: 12px;
+  }
+
+  /* ============================================
+   TABLET
+============================================ */
+
+  @media (max-width: 1024px) {
+    .project-card-featured .project-content {
+      padding: 35px;
+    }
+
+    .project-card-featured .project-content h3 {
+      font-size: 30px;
+    }
+
+    .projects-grid {
+      gap: 22px;
+    }
+  }
+
+  /* ============================================
+   CELULAR
+============================================ */
+
+  @media (max-width: 768px) {
+    /* ------------------------------------------
+     SCRUMFLOW
+  ------------------------------------------ */
+
+    .project-card-featured {
+      grid-template-columns: 1fr;
+
+      margin-bottom: 35px;
+    }
+
+    .project-card-featured .project-image {
+      min-height: 280px;
+
+      height: 280px;
+    }
+
+    .project-card-featured .project-content {
+      padding: 35px;
+    }
+
+    .project-card-featured .project-content h3 {
+      font-size: 30px;
+    }
+
+    /* ------------------------------------------
+     PROJETOS SECUNDÁRIOS
+  ------------------------------------------ */
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+
+      gap: 25px;
+    }
+
+    .project-card-secondary .project-image {
+      height: 220px;
+
+      min-height: 220px;
+    }
+  }
+
+  /* ============================================
+   CELULAR PEQUENO
+============================================ */
+
+  @media (max-width: 480px) {
+    .project-card-featured .project-image {
+      height: 220px;
+
+      min-height: 220px;
+    }
+
+    .project-card-featured .project-content {
+      padding: 28px 22px;
+    }
+
+    .project-card-featured .project-content h3 {
+      font-size: 27px;
+    }
+
+    .project-card-secondary .project-content {
+      padding: 22px;
+    }
+
+    .project-card-secondary .project-content h3 {
+      font-size: 23px;
+    }
+
+    .project-card-secondary .project-image {
+      height: 190px;
+
+      min-height: 190px;
+    }
+
+    .project-highlights {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* FORMAÇÃO */
