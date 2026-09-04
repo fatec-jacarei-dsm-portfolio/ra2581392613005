@@ -29,7 +29,6 @@
   --transition: 0.3s ease;
 }
 
-
 /* ============================================
    RESET
 ============================================ */
@@ -66,7 +65,6 @@ img {
   display: block;
 }
 
-
 /* ============================================
    CONTAINER
 ============================================ */
@@ -78,7 +76,6 @@ img {
   padding: 0 24px;
 }
 
-
 /* ============================================
    NAVBAR
 ============================================ */
@@ -87,12 +84,10 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   z-index: 1000;
 
   background: rgba(15, 23, 42, 0.96);
-
   backdrop-filter: blur(10px);
 
   border-bottom: 1px solid var(--dark-border);
@@ -110,10 +105,8 @@ img {
 
 .logo {
   color: var(--white);
-
   font-size: 21px;
   font-weight: 800;
-
   letter-spacing: -0.5px;
 
   transition: var(--transition);
@@ -126,7 +119,6 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-
   gap: 28px;
 }
 
@@ -145,7 +137,6 @@ img {
   content: "";
 
   position: absolute;
-
   left: 0;
   bottom: -7px;
 
@@ -164,7 +155,6 @@ img {
 .nav-links a:hover::after {
   width: 100%;
 }
-
 
 /* ============================================
    HERO
@@ -186,11 +176,7 @@ img {
       rgba(37, 99, 235, 0.16),
       transparent 30%
     ),
-    linear-gradient(
-      135deg,
-      var(--dark) 0%,
-      var(--dark-secondary) 100%
-    );
+    linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
 }
 
 .hero-content {
@@ -203,7 +189,6 @@ img {
 
 .hero-text {
   flex: 1;
-
   max-width: 720px;
 }
 
@@ -213,7 +198,6 @@ img {
   padding: 7px 15px;
 
   border: 1px solid rgba(96, 165, 250, 0.3);
-
   border-radius: 50px;
 
   background: rgba(37, 99, 235, 0.15);
@@ -228,22 +212,16 @@ img {
 
 .hero h1 {
   font-size: clamp(38px, 5vw, 58px);
-
   line-height: 1.08;
 
   font-weight: 800;
-
   letter-spacing: -2px;
 
   margin-bottom: 22px;
 }
 
 .highlight {
-  background: linear-gradient(
-    135deg,
-    var(--primary-light),
-    var(--primary)
-  );
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -257,7 +235,6 @@ img {
   color: #94a3b8;
 
   font-size: 19px;
-
   line-height: 1.7;
 
   margin-bottom: 34px;
@@ -265,12 +242,9 @@ img {
 
 .hero-buttons {
   display: flex;
-
   gap: 14px;
-
   flex-wrap: wrap;
 }
-
 
 /* ============================================
    FOTO / AVATAR
@@ -290,11 +264,7 @@ img {
 
   border-radius: 50%;
 
-  background: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary-dark)
-  );
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 
   border: 4px solid var(--primary-light);
 
@@ -305,7 +275,6 @@ img {
 
 .avatar-placeholder span {
   font-size: 72px;
-
   font-weight: 800;
 
   color: rgba(255, 255, 255, 0.9);
@@ -320,7 +289,6 @@ img {
   border-radius: 50%;
 }
 
-
 /* ============================================
    BOTÕES
 ============================================ */
@@ -332,7 +300,6 @@ img {
   justify-content: center;
 
   min-height: 48px;
-
   padding: 0 24px;
 
   border-radius: 10px;
@@ -349,7 +316,6 @@ img {
 
 .btn-primary {
   background: var(--primary);
-
   color: var(--white);
 }
 
@@ -358,8 +324,7 @@ img {
 
   transform: translateY(-2px);
 
-  box-shadow:
-    0 10px 30px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
 }
 
 .btn-secondary {
@@ -372,7 +337,6 @@ img {
 
 .btn-secondary:hover {
   border-color: var(--primary-light);
-
   color: var(--primary-light);
 
   transform: translateY(-2px);
@@ -388,7 +352,6 @@ img {
   border-radius: 8px;
 }
 
-
 /* ============================================
    SEÇÕES
 ============================================ */
@@ -399,7 +362,6 @@ img {
 
 .section-dark {
   background: var(--dark);
-
   color: var(--white);
 }
 
@@ -428,7 +390,6 @@ img {
   font-weight: 700;
 
   text-transform: uppercase;
-
   letter-spacing: 1.5px;
 
   margin-bottom: 10px;
@@ -459,7 +420,6 @@ img {
 .section-heading-light .section-subtitle {
   color: #94a3b8;
 }
-
 
 /* ============================================
    SOBRE
@@ -509,10 +469,8 @@ img {
   color: var(--text-secondary);
 
   font-size: 13px;
-
   font-weight: 600;
 }
-
 
 /* ============================================
    DESTAQUE SOBRE
@@ -520,7 +478,6 @@ img {
 
 .sobre-destaque {
   display: flex;
-
   justify-content: center;
 }
 
@@ -537,8 +494,7 @@ img {
 
   border: 1px solid var(--dark-border);
 
-  box-shadow:
-    0 20px 50px rgba(15, 23, 42, 0.15);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
 }
 
 .destaque-numero {
@@ -547,7 +503,6 @@ img {
   color: var(--primary-light);
 
   font-size: 58px;
-
   font-weight: 800;
 
   line-height: 1;
@@ -564,7 +519,6 @@ img {
 
   line-height: 1.6;
 }
-
 
 /* ============================================
    HABILIDADES
@@ -595,8 +549,7 @@ img {
 
   border-color: var(--primary);
 
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 .habilidade-icon {
@@ -616,7 +569,6 @@ img {
   color: var(--primary-light);
 
   font-size: 17px;
-
   font-weight: 800;
 }
 
@@ -635,7 +587,6 @@ img {
 
   margin-bottom: 20px;
 }
-
 
 /* ============================================
    TECNOLOGIAS
@@ -659,10 +610,8 @@ img {
   color: #cbd5e1;
 
   font-size: 11px;
-
   font-weight: 600;
 }
-
 
 /* ============================================
    PROJETOS
@@ -671,7 +620,6 @@ img {
 #projetos {
   background: var(--background);
 }
-
 
 /* ============================================
    PROJETO PRINCIPAL — SCRUMFLOW
@@ -692,8 +640,7 @@ img {
 
   background: var(--white);
 
-  box-shadow:
-    0 10px 35px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
 
   transition: var(--transition);
 
@@ -703,10 +650,8 @@ img {
 .project-card:hover {
   transform: translateY(-5px);
 
-  box-shadow:
-    0 20px 50px rgba(15, 23, 42, 0.10);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
 }
-
 
 /* ============================================
    IMAGEM DO SCRUMFLOW
@@ -716,25 +661,18 @@ img {
   min-height: 400px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      135deg,
-      #0f172a,
-      #1e293b
-    );
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .project-image-placeholder {
   color: #64748b;
 
   font-size: 24px;
-
   font-weight: 700;
 
   letter-spacing: 1px;
@@ -752,7 +690,6 @@ img {
 .project-card:hover .project-image img {
   transform: scale(1.04);
 }
-
 
 /* ============================================
    CONTEÚDO DO SCRUMFLOW
@@ -776,7 +713,6 @@ img {
   color: var(--primary);
 
   font-size: 12px;
-
   font-weight: 700;
 
   text-transform: uppercase;
@@ -794,7 +730,7 @@ img {
   line-height: 1.1;
 }
 
-.project-content p {
+.project-content > p {
   max-width: 560px;
 
   margin-bottom: 25px;
@@ -805,7 +741,6 @@ img {
 
   line-height: 1.7;
 }
-
 
 /* ============================================
    TECNOLOGIAS DO SCRUMFLOW
@@ -833,10 +768,75 @@ img {
   color: var(--text-secondary);
 
   font-size: 11px;
-
   font-weight: 600;
 }
 
+/* ============================================
+   MINHA CONTRIBUIÇÃO — SCRUMFLOW
+============================================ */
+
+.project-contribution {
+  margin-bottom: 30px;
+
+  padding: 22px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: var(--background);
+}
+
+.project-contribution-label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--dark);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.contribution-item {
+  padding: 13px 0;
+
+  border-top: 1px solid var(--border);
+}
+
+.contribution-item:first-of-type {
+  padding-top: 0;
+
+  border-top: none;
+}
+
+.contribution-item:last-child {
+  padding-bottom: 0;
+}
+
+.contribution-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--text);
+
+  font-size: 13px;
+}
+
+.contribution-item p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
 
 /* ============================================
    BOTÕES DO SCRUMFLOW
@@ -854,10 +854,30 @@ img {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 }
 
+/*
+   Correção do botão secundário no card branco.
+   O .btn-secondary global foi pensado para
+   fundos escuros.
+*/
+
+.project-actions .btn-secondary {
+  color: var(--text-secondary);
+
+  border-color: var(--border);
+
+  background: var(--white);
+}
+
+.project-actions .btn-secondary:hover {
+  color: var(--primary);
+
+  border-color: var(--primary);
+
+  background: #eff6ff;
+}
 
 /* ============================================
    PROJETOS SECUNDÁRIOS
@@ -872,7 +892,6 @@ img {
 
   margin-top: 40px;
 }
-
 
 /* ============================================
    CARD DOS PROJETOS SECUNDÁRIOS
@@ -899,10 +918,8 @@ img {
 
   border-color: #bfdbfe;
 
-  box-shadow:
-    0 18px 45px rgba(15, 23, 42, 0.10);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
 }
-
 
 /* ============================================
    IMAGEM DOS PROJETOS SECUNDÁRIOS
@@ -910,33 +927,23 @@ img {
 
 .projeto-image {
   width: 100%;
-
   height: 180px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      135deg,
-      #0f172a,
-      #1e293b
-    );
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .projeto-image-placeholder {
   color: #64748b;
 
   font-size: 14px;
-
   font-weight: 600;
 }
-
 
 /* ============================================
    CONTEÚDO DOS PROJETOS SECUNDÁRIOS
@@ -960,7 +967,6 @@ img {
   color: var(--primary);
 
   font-size: 11px;
-
   font-weight: 700;
 
   text-transform: uppercase;
@@ -988,7 +994,6 @@ img {
   flex-grow: 1;
 }
 
-
 /* ============================================
    TECNOLOGIAS DOS PROJETOS SECUNDÁRIOS
 ============================================ */
@@ -1015,10 +1020,8 @@ img {
   color: var(--text-secondary);
 
   font-size: 11px;
-
   font-weight: 600;
 }
-
 
 /* ============================================
    LINKS DOS PROJETOS SECUNDÁRIOS
@@ -1036,7 +1039,6 @@ img {
   color: var(--text-secondary);
 
   font-size: 13px;
-
   font-weight: 700;
 
   transition: var(--transition);
@@ -1045,7 +1047,6 @@ img {
 .btn-link:hover {
   color: var(--primary);
 }
-
 
 /* ============================================
    FORMAÇÃO
@@ -1075,7 +1076,6 @@ img {
   color: var(--primary);
 
   font-size: 20px;
-
   font-weight: 800;
 }
 
@@ -1085,7 +1085,6 @@ img {
   color: var(--primary);
 
   font-size: 13px;
-
   font-weight: 700;
 
   text-transform: uppercase;
@@ -1123,10 +1122,79 @@ img {
   color: var(--primary);
 
   font-size: 12px;
-
   font-weight: 700;
 }
 
+/* ============================================
+   CURSOS COMPLEMENTARES
+============================================ */
+
+.cursos-complementares {
+  margin-top: 90px;
+}
+
+.cursos-complementares .section-heading {
+  margin-bottom: 35px;
+}
+
+.cursos-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.curso-card {
+  padding: 24px;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  background: var(--white);
+
+  transition: var(--transition);
+}
+
+.curso-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #bfdbfe;
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+.curso-tipo {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.curso-card h3 {
+  color: var(--dark);
+
+  font-size: 17px;
+
+  line-height: 1.35;
+
+  margin-bottom: 8px;
+}
+
+.curso-card p {
+  color: var(--text-muted);
+
+  font-size: 13px;
+}
 
 /* ============================================
    CONTATO
@@ -1191,7 +1259,6 @@ img {
   height: 36px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -1202,10 +1269,8 @@ img {
   color: var(--primary-light);
 
   font-size: 12px;
-
   font-weight: 800;
 }
-
 
 /* ============================================
    CAIXA DE CONTATO
@@ -1227,7 +1292,6 @@ img {
   color: var(--primary-light);
 
   font-size: 12px;
-
   font-weight: 700;
 
   text-transform: uppercase;
@@ -1236,7 +1300,6 @@ img {
 
   margin-bottom: 12px;
 }
-
 
 /* ============================================
    FOOTER
@@ -1264,13 +1327,11 @@ img {
   color: #94a3b8;
 }
 
-
 /* ============================================
    RESPONSIVIDADE — TABLET
 ============================================ */
 
 @media (max-width: 1024px) {
-
   .hero-content {
     gap: 50px;
   }
@@ -1296,15 +1357,16 @@ img {
     font-size: 30px;
   }
 
+  .cursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
 
 /* ============================================
    RESPONSIVIDADE — CELULAR
 ============================================ */
 
 @media (max-width: 768px) {
-
   /* NAVBAR */
 
   .navbar-container {
@@ -1325,7 +1387,6 @@ img {
   .nav-links a {
     font-size: 12px;
   }
-
 
   /* HERO */
 
@@ -1366,13 +1427,11 @@ img {
     font-size: 52px;
   }
 
-
   /* SEÇÕES */
 
   .section {
     padding: 75px 0;
   }
-
 
   /* SOBRE */
 
@@ -1394,17 +1453,13 @@ img {
     max-width: 400px;
   }
 
-
   /* HABILIDADES */
 
   .habilidades-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-
-  /* ========================================
-     PROJETO PRINCIPAL
-  ======================================== */
+  /* PROJETO PRINCIPAL */
 
   .project-card {
     grid-template-columns: 1fr;
@@ -1424,10 +1479,13 @@ img {
     font-size: 30px;
   }
 
+  /* MINHA CONTRIBUIÇÃO */
 
-  /* ========================================
-     PROJETOS SECUNDÁRIOS
-  ======================================== */
+  .project-contribution {
+    padding: 20px;
+  }
+
+  /* PROJETOS SECUNDÁRIOS */
 
   .projetos-secundarios {
     grid-template-columns: 1fr;
@@ -1445,7 +1503,6 @@ img {
     margin: 0 auto;
   }
 
-
   /* FORMAÇÃO */
 
   .formacao-card {
@@ -1454,6 +1511,15 @@ img {
     gap: 15px;
   }
 
+  /* CURSOS */
+
+  .cursos-complementares {
+    margin-top: 70px;
+  }
+
+  .cursos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
   /* CONTATO */
 
@@ -1462,27 +1528,22 @@ img {
 
     gap: 45px;
   }
-
 }
-
 
 /* ============================================
    RESPONSIVIDADE — CELULAR PEQUENO
 ============================================ */
 
 @media (max-width: 480px) {
-
   .container {
     padding: 0 18px;
   }
-
 
   /* NAVBAR */
 
   .nav-links {
     gap: 11px;
   }
-
 
   /* HERO */
 
@@ -1500,13 +1561,11 @@ img {
     flex-direction: column;
   }
 
-
   /* BOTÕES */
 
   .btn {
     width: 100%;
   }
-
 
   /* HABILIDADES */
 
@@ -1514,17 +1573,13 @@ img {
     grid-template-columns: 1fr;
   }
 
-
   /* TÍTULOS */
 
   .section-title {
     font-size: 29px;
   }
 
-
-  /* ========================================
-     PROJETO PRINCIPAL
-  ======================================== */
+  /* PROJETO PRINCIPAL */
 
   .project-content {
     padding: 28px 22px;
@@ -1544,10 +1599,15 @@ img {
     width: 100%;
   }
 
+  .project-contribution {
+    padding: 18px;
+  }
 
-  /* ========================================
-     PROJETOS SECUNDÁRIOS
-  ======================================== */
+  .contribution-item p {
+    font-size: 12.5px;
+  }
+
+  /* PROJETOS SECUNDÁRIOS */
 
   .projeto-image {
     height: 160px;
@@ -1557,6 +1617,11 @@ img {
     padding: 22px;
   }
 
+  /* CURSOS */
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
 
   /* FORMAÇÃO */
 
@@ -1568,11 +1633,9 @@ img {
     font-size: 20px;
   }
 
-
   /* CONTATO */
 
   .contato-box {
     padding: 28px 22px;
   }
-
 }
