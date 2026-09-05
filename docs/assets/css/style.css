@@ -530,14 +530,8 @@ img {
 }
 
 /* ============================================
-   PROJETOS
+   PROJETOS - PRINCIPAL (SCRUMFLOW)
 ============================================ */
-
-#projetos {
-  background: var(--background);
-}
-
-/* ----- PROJETO DESTAQUE (SCRUMFLOW) ----- */
 
 .project-featured {
   display: grid;
@@ -548,16 +542,17 @@ img {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: var(--transition);
-  margin-bottom: 55px;
+  margin-bottom: 48px;
+  max-height: 520px;
 }
 
 .project-featured:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
 
 .project-featured-image {
-  min-height: 420px;
+  min-height: 520px;
   overflow: hidden;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
@@ -577,238 +572,353 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 45px;
-}
-
-.project-badge {
-  display: inline-block;
-  width: fit-content;
-  margin-bottom: 14px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-}
-
-.project-badge-academic {
-  color: var(--primary);
-}
-
-.project-badge-personal {
-  color: #8b5cf6;
+  padding: 40px;
+  overflow-y: auto;
 }
 
 .project-featured-content h3 {
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.1;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: var(--dark);
 }
 
 .project-description {
   color: var(--text-muted);
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 30px;
+  gap: 6px;
+  margin-bottom: 20px;
 }
 
 .project-tech span {
-  padding: 6px 10px;
+  padding: 4px 10px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--background);
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
 }
 
-/* ----- CONTRIBUIÇÕES EM CARDS ----- */
+/* ----- CONTRIBUIÇÕES POR SPRINT ----- */
+
+.contributions {
+  margin-bottom: 24px;
+}
 
 .contributions-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-.contributions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 30px;
+.contribution-sprint {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
 }
 
-.contribution-card {
-  padding: 16px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-small);
-  background: var(--background-secondary);
-  transition: var(--transition);
+.contribution-sprint:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-.contribution-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary-light);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+.sprint-tag {
+  flex-shrink: 0;
+  min-width: 80px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.contribution-icon {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 6px;
+.sprint-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
 }
 
-.contribution-card strong {
-  display: block;
-  font-size: 13px;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-
-.contribution-card p {
+.sprint-item {
   font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
+  color: var(--text-secondary);
+  padding: 2px 0;
 }
 
-/* ----- PROJETOS SECUNDÁRIOS ----- */
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+.sprint-item::before {
+  content: "▸ ";
+  color: var(--primary);
+  font-weight: 700;
 }
 
-.project-card {
+.sprint-item.highlight-item {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.sprint-item.highlight-item::before {
+  content: "✦ ";
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ============================================
+   PROJETOS SECUNDÁRIOS - LISTA VERTICAL
+============================================ */
+
+.projects-list {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--white);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: var(--transition);
+  padding: 20px 24px;
+  align-items: center;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+.project-row:hover {
+  transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
 }
 
-.project-card-image {
-  height: 200px;
+.project-row-image {
+  width: 140px;
+  height: 100px;
   overflow: hidden;
+  border-radius: var(--radius-small);
   background: linear-gradient(135deg, #0f172a, #1e293b);
+  flex-shrink: 0;
 }
 
-.project-card-image img {
+.project-row-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-card-image img {
-  transform: scale(1.04);
+.project-row:hover .project-row-image img {
+  transform: scale(1.05);
+}
+
+.project-row-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.project-row-content .project-badge {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.project-row-content h3 {
+  font-size: 20px;
+  color: var(--dark);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.project-row-content .project-description {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.project-row-content .project-tech {
+  margin-bottom: 6px;
+}
+
+.project-row-content .project-tech span {
+  font-size: 9px;
+  padding: 3px 8px;
+}
+
+.project-row-contribution {
+  margin-bottom: 6px;
+}
+
+.project-row-contribution strong {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--text);
+  margin-right: 6px;
+}
+
+.project-row-contribution span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.project-row .project-actions {
+  margin-top: 0;
+}
+
+.project-row .project-actions .btn-small {
+  font-size: 10px;
+  min-height: 32px;
+  padding: 0 12px;
+}
+
+/* Projeto "Em breve" */
+.project-row-coming .project-row-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coming-soon {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   color: #64748b;
 }
 
 .coming-soon span {
-  font-size: 48px;
-  margin-bottom: 8px;
+  font-size: 32px;
+  display: block;
 }
 
 .coming-soon p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
+  margin: 4px 0 0;
 }
 
-.project-card-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 25px;
+/* ============================================
+   RESPONSIVIDADE - PROJETOS
+============================================ */
+
+@media (max-width: 1024px) {
+  .project-featured {
+    grid-template-columns: 1fr 1fr;
+    max-height: none;
+  }
+
+  .project-featured-image {
+    min-height: 380px;
+  }
+
+  .project-featured-content {
+    padding: 30px;
+  }
 }
 
-.project-card-content .project-badge {
-  font-size: 10px;
-  letter-spacing: 0.4px;
+@media (max-width: 768px) {
+  .project-featured {
+    grid-template-columns: 1fr;
+    max-height: none;
+    margin-bottom: 32px;
+  }
+
+  .project-featured-image {
+    min-height: 240px;
+  }
+
+  .project-featured-content {
+    padding: 24px;
+  }
+
+  .project-featured-content h3 {
+    font-size: 26px;
+  }
+
+  .contribution-sprint {
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  .sprint-tag {
+    min-width: auto;
+    width: fit-content;
+    font-size: 9px;
+    padding: 2px 10px;
+  }
+
+  .sprint-item {
+    font-size: 11px;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .project-row-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .project-row-content h3 {
+    font-size: 18px;
+  }
+
+  .project-row .project-actions {
+    flex-wrap: wrap;
+  }
 }
 
-.project-card-content h3 {
-  font-size: 22px;
-  color: var(--dark);
-  margin-bottom: 10px;
+@media (max-width: 480px) {
+  .project-featured-content {
+    padding: 18px;
+  }
+
+  .project-featured-content h3 {
+    font-size: 22px;
+  }
+
+  .project-row {
+    padding: 14px;
+  }
+
+  .project-row-image {
+    height: 140px;
+  }
+
+  .project-row-content h3 {
+    font-size: 17px;
+  }
+
+  .project-row-contribution span {
+    font-size: 11px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .btn-small {
+    width: 100%;
+    justify-content: center;
+  }
 }
-
-.project-card-content .project-description {
-  font-size: 13px;
-  margin-bottom: 18px;
-}
-
-.project-card-content .project-tech {
-  margin-bottom: 20px;
-}
-
-.project-card-content .project-tech span {
-  font-size: 10px;
-  padding: 4px 8px;
-}
-
-/* ----- CONTRIBUIÇÕES MINI ----- */
-
-.contributions-mini {
-  margin-bottom: 20px;
-}
-
-.contributions-mini strong {
-  display: block;
-  font-size: 12px;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-
-.contributions-mini ul {
-  padding-left: 18px;
-}
-
-.contributions-mini li {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 2px;
-}
-
-.project-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.project-actions .btn-small {
-  font-size: 11px;
-  min-height: 36px;
-  padding: 0 14px;
-}
-
 /* ============================================
    FORMAÇÃO
 ============================================ */

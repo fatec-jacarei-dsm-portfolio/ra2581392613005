@@ -208,8 +208,8 @@
     </section>
 
     <!-- ============================================
-         PROJETOS
-    ============================================= -->
+     PROJETOS
+============================================ -->
     <section id="projetos" class="section">
       <div class="container">
         <div class="section-heading">
@@ -222,8 +222,8 @@
         </div>
 
         <!-- ==========================================
-                 PROJETO PRINCIPAL - SCRUMFLOW
-            ========================================== -->
+             PROJETO PRINCIPAL - SCRUMFLOW
+        ========================================== -->
         <article class="project-featured">
           <div class="project-featured-image">
             <img
@@ -255,65 +255,63 @@
               <span>Express 5</span>
               <span>PostgreSQL</span>
               <span>JWT</span>
+              <span>bcrypt</span>
             </div>
 
-            <!-- MINHA CONTRIBUIÇÃO EM CARDS -->
+            <!-- MINHA CONTRIBUIÇÃO - RESUMIDA -->
             <div class="contributions">
               <h4 class="contributions-title">Minha contribuição no projeto</h4>
 
-              <div class="contributions-grid">
-                <div class="contribution-card">
-                  <span class="contribution-icon">⚙️</span>
-                  <strong>Backend & APIs</strong>
-                  <p>
-                    Desenvolvimento do backend com Node.js e Express, incluindo
-                    rotas, controllers e middlewares.
-                  </p>
+              <!-- Sprint 1 -->
+              <div class="contribution-sprint">
+                <span class="sprint-tag">1ª Sprint</span>
+                <div class="sprint-items">
+                  <span class="sprint-item">Modelagem do Banco de Dados</span>
+                  <span class="sprint-item"
+                    >Diagramas UML (Casos de Uso, Sequência)</span
+                  >
+                  <span class="sprint-item"
+                    >Criptografia de senha com bcrypt</span
+                  >
+                  <span class="sprint-item">Rotas de cadastro e login</span>
                 </div>
+              </div>
 
-                <div class="contribution-card">
-                  <span class="contribution-icon">🔐</span>
-                  <strong>Autenticação</strong>
-                  <p>
-                    Implementação de autenticação JWT, sessões e bcrypt para
-                    segurança de dados.
-                  </p>
+              <!-- Sprint 2 -->
+              <div class="contribution-sprint">
+                <span class="sprint-tag">2ª Sprint</span>
+                <div class="sprint-items">
+                  <span class="sprint-item">Endpoints GET de questões</span>
+                  <span class="sprint-item"
+                    >Refatoração do front-end (HTML/CSS/JS)</span
+                  >
+                  <span class="sprint-item"
+                    >Atualização do modelo lógico do BD</span
+                  >
+                  <span class="sprint-item"
+                    >Testes de experiência do usuário</span
+                  >
                 </div>
+              </div>
 
-                <div class="contribution-card">
-                  <span class="contribution-icon">📊</span>
-                  <strong>Banco de Dados</strong>
-                  <p>
-                    Modelagem PostgreSQL, desenvolvimento de diagramas UML e
-                    consultas SQL.
-                  </p>
-                </div>
-
-                <div class="contribution-card">
-                  <span class="contribution-icon">🎨</span>
-                  <strong>Frontend & Integração</strong>
-                  <p>
-                    Refatoração de frontend, CSS, JavaScript e integração entre
-                    frontend e backend.
-                  </p>
-                </div>
-
-                <div class="contribution-card">
-                  <span class="contribution-icon">🛠️</span>
-                  <strong>Funcionalidades Admin</strong>
-                  <p>
-                    Implementação do authAdmin, recuperação de senha e notas por
-                    módulo.
-                  </p>
-                </div>
-
-                <div class="contribution-card">
-                  <span class="contribution-icon">📝</span>
-                  <strong>Documentação</strong>
-                  <p>
-                    Documentação da API e estruturação do projeto para facilitar
-                    a manutenção.
-                  </p>
+              <!-- Sprint 3 -->
+              <div class="contribution-sprint">
+                <span class="sprint-tag">3ª Sprint</span>
+                <div class="sprint-items">
+                  <span class="sprint-item highlight-item"
+                    >AuthAdmin + integração com front-end</span
+                  >
+                  <span class="sprint-item highlight-item"
+                    >Reset de senha via admin</span
+                  >
+                  <span class="sprint-item highlight-item"
+                    >Exibição de nota por módulo</span
+                  >
+                  <span class="sprint-item">Proteção de rotas JWT</span>
+                  <span class="sprint-item"
+                    >Refatoração do footer em JS único</span
+                  >
+                  <span class="sprint-item">Roteiro da apresentação final</span>
                 </div>
               </div>
             </div>
@@ -341,29 +339,24 @@
         </article>
 
         <!-- ==========================================
-                 PROJETOS SECUNDÁRIOS
-            ========================================== -->
-        <div class="projects-grid">
+             PROJETOS SECUNDÁRIOS - LISTA VERTICAL
+        ========================================== -->
+        <div class="projects-list">
           <!-- PROJETO 2 - DDD EXPLORER -->
-          <article class="project-card">
-            <div class="project-card-image">
-              <img
-                src="assets/img/ddd-explorer.png"
-                alt="DDD Explorer - Consulta de cidades por DDD"
-              />
+          <article class="project-row">
+            <div class="project-row-image">
+              <img src="assets/img/ddd-explorer.png" alt="DDD Explorer" />
             </div>
 
-            <div class="project-card-content">
+            <div class="project-row-content">
               <span class="project-badge project-badge-academic">
                 📚 Acadêmico · Desenvolvimento Web 2 · 2DSM
               </span>
-
               <h3>DDD Explorer</h3>
-
               <p class="project-description">
-                Aplicação para consulta de cidades por DDD, desenvolvida com
-                React e TypeScript. Inclui modo claro/escuro, favoritos,
-                histórico e filtro em tempo real.
+                Aplicação para consulta de cidades por DDD com React e
+                TypeScript. Inclui modo claro/escuro, favoritos, histórico e
+                filtro em tempo real.
               </p>
 
               <div class="project-tech">
@@ -376,14 +369,12 @@
                 <span>LocalStorage</span>
               </div>
 
-              <div class="contributions-mini">
+              <div class="project-row-contribution">
                 <strong>Minha evolução:</strong>
-                <ul>
-                  <li>Criação da identidade visual e estilização completa</li>
-                  <li>Modo claro e escuro</li>
-                  <li>Filtro de cidades em tempo real</li>
-                  <li>Sistema de favoritos e histórico com LocalStorage</li>
-                </ul>
+                <span
+                  >Identidade visual · Modo claro/escuro · Filtro em tempo real
+                  · Favoritos com LocalStorage</span
+                >
               </div>
 
               <div class="project-actions">
@@ -408,21 +399,19 @@
           </article>
 
           <!-- PROJETO 3 - EM BREVE -->
-          <article class="project-card project-card-coming">
-            <div class="project-card-image">
+          <article class="project-row project-row-coming">
+            <div class="project-row-image">
               <div class="coming-soon">
                 <span>🚧</span>
                 <p>Em desenvolvimento</p>
               </div>
             </div>
 
-            <div class="project-card-content">
+            <div class="project-row-content">
               <span class="project-badge project-badge-personal">
                 💻 Pessoal · Em andamento
               </span>
-
               <h3>Novo Projeto</h3>
-
               <p class="project-description">
                 Um novo projeto está sendo desenvolvido para aplicar
                 conhecimentos em desenvolvimento fullstack. Em breve mais
@@ -446,7 +435,6 @@
         </div>
       </div>
     </section>
-
     <!-- ============================================
          FORMAÇÃO
     ============================================= -->
