@@ -555,7 +555,7 @@ img {
 ============================================ */
 
 .project-main-image {
-  min-height: 560px;
+  min-height: 400px;
   overflow: hidden;
   background: var(--dark);
 }
@@ -578,7 +578,7 @@ img {
 .project-main-content {
   display: flex;
   flex-direction: column;
-  padding: 38px;
+  padding: 30px;
 }
 
 .project-tag {
