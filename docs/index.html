@@ -214,7 +214,7 @@
       <div class="container">
         <div class="section-heading">
           <span class="section-label">Projetos</span>
-          <h2 class="section-title">Projetos que representam minha evolução</h2>
+          <h2 class="section-title">Evolução</h2>
           <p class="section-subtitle">
             Projetos acadêmicos e aplicações desenvolvidas ao longo da minha
             formação em Desenvolvimento de Software Multiplataforma.
@@ -252,66 +252,126 @@
               <span>CSS3</span>
               <span>JavaScript</span>
               <span>Node.js</span>
-              <span>Express 5</span>
+              <span>Express</span>
               <span>PostgreSQL</span>
               <span>JWT</span>
               <span>bcrypt</span>
             </div>
 
-            <!-- MINHA CONTRIBUIÇÃO - RESUMIDA -->
+            <!-- MINHA CONTRIBUIÇÃO - CARDS ORGANIZADOS -->
             <div class="contributions">
               <h4 class="contributions-title">Minha contribuição no projeto</h4>
 
-              <!-- Sprint 1 -->
-              <div class="contribution-sprint">
-                <span class="sprint-tag">1ª Sprint</span>
-                <div class="sprint-items">
-                  <span class="sprint-item">Modelagem do Banco de Dados</span>
-                  <span class="sprint-item"
-                    >Diagramas UML (Casos de Uso, Sequência)</span
-                  >
-                  <span class="sprint-item"
-                    >Criptografia de senha com bcrypt</span
-                  >
-                  <span class="sprint-item">Rotas de cadastro e login</span>
+              <div class="contributions-grid">
+                <div class="contribution-card">
+                  <span class="contribution-icon">🗄️</span>
+                  <strong>Modelagem do Banco de Dados</strong>
+                  <p>
+                    Estruturação do modelo conceitual e lógico, definição de
+                    tabelas, relacionamentos e chaves para o sistema de
+                    certificação.
+                  </p>
                 </div>
-              </div>
 
-              <!-- Sprint 2 -->
-              <div class="contribution-sprint">
-                <span class="sprint-tag">2ª Sprint</span>
-                <div class="sprint-items">
-                  <span class="sprint-item">Endpoints GET de questões</span>
-                  <span class="sprint-item"
-                    >Refatoração do front-end (HTML/CSS/JS)</span
-                  >
-                  <span class="sprint-item"
-                    >Atualização do modelo lógico do BD</span
-                  >
-                  <span class="sprint-item"
-                    >Testes de experiência do usuário</span
-                  >
+                <div class="contribution-card">
+                  <span class="contribution-icon">📐</span>
+                  <strong>Diagramas UML</strong>
+                  <p>
+                    Desenvolvimento de diagramas de Casos de Uso e Sequência
+                    para documentação e planejamento da arquitetura do sistema.
+                  </p>
                 </div>
-              </div>
 
-              <!-- Sprint 3 -->
-              <div class="contribution-sprint">
-                <span class="sprint-tag">3ª Sprint</span>
-                <div class="sprint-items">
-                  <span class="sprint-item highlight-item"
-                    >AuthAdmin + integração com front-end</span
-                  >
-                  <span class="sprint-item highlight-item"
-                    >Reset de senha via admin</span
-                  >
-                  <span class="sprint-item highlight-item"
-                    >Exibição de nota por módulo</span
-                  >
-                  <span class="sprint-item">Proteção de rotas JWT</span>
-                  <span class="sprint-item"
-                    >Refatoração do footer em JS único</span
-                  >
-                  <span class="sprint-item">Roteiro da apresentação final</span>
+                <div class="contribution-card">
+                  <span class="contribution-icon">🔐</span>
+                  <strong>Criptografia com bcrypt</strong>
+                  <p>
+                    Implementação de hash de senhas com bcrypt para garantir
+                    segurança dos dados dos usuários no sistema.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">🚪</span>
+                  <strong>Rotas de Cadastro e Login</strong>
+                  <p>
+                    Desenvolvimento de endpoints de autenticação, criação de
+                    usuários e gerenciamento de sessões com JWT.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">📡</span>
+                  <strong>Endpoints GET de Questões</strong>
+                  <p>
+                    Desenvolvimento de APIs para recuperação de questões,
+                    permitindo a exibição dinâmica no front-end durante as
+                    avaliações.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">🎨</span>
+                  <strong>Refatoração Front-end</strong>
+                  <p>
+                    Revisão e otimização de HTML, CSS e JavaScript para melhorar
+                    a experiência do usuário e a integração com o backend.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">🛡️</span>
+                  <strong>Autenticação Admin (AuthAdmin)</strong>
+                  <p>
+                    Implementação do sistema de autenticação administrativa com
+                    integração front-end para gerenciamento do portal.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">🔑</span>
+                  <strong>Reset de Senha via Admin</strong>
+                  <p>
+                    Desenvolvimento de funcionalidade para administradores
+                    resetarem senhas de usuários, garantindo recuperação de
+                    acesso.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">📊</span>
+                  <strong>Exibição de Nota por Módulo</strong>
+                  <p>
+                    Implementação do sistema que exibe notas por módulo para
+                    cada usuário, permitindo acompanhamento de desempenho.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">🔒</span>
+                  <strong>Proteção de Rotas JWT</strong>
+                  <p>
+                    Configuração de middleware para proteção de rotas sensíveis,
+                    garantindo que apenas usuários autenticados tenham acesso.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">📄</span>
+                  <strong>Refatoração do Footer</strong>
+                  <p>
+                    Criação de um arquivo JavaScript único para gerenciar o
+                    footer em todas as páginas, centralizando a manutenção.
+                  </p>
+                </div>
+
+                <div class="contribution-card">
+                  <span class="contribution-icon">🎤</span>
+                  <strong>Roteiro de Apresentação</strong>
+                  <p>
+                    Elaboração do roteiro e preparação da apresentação final do
+                    projeto integrador para a banca avaliadora.
+                  </p>
                 </div>
               </div>
             </div>
@@ -339,20 +399,22 @@
         </article>
 
         <!-- ==========================================
-             PROJETOS SECUNDÁRIOS - LISTA VERTICAL
+             PROJETOS SECUNDÁRIOS - LADO A LADO
         ========================================== -->
-        <div class="projects-list">
+        <div class="projects-secondary">
           <!-- PROJETO 2 - DDD EXPLORER -->
-          <article class="project-row">
-            <div class="project-row-image">
+          <article class="project-secondary">
+            <div class="project-secondary-image">
               <img src="assets/img/ddd-explorer.png" alt="DDD Explorer" />
             </div>
 
-            <div class="project-row-content">
+            <div class="project-secondary-content">
               <span class="project-badge project-badge-academic">
-                📚 Acadêmico · Desenvolvimento Web 2 · 2DSM
+                📚 Acadêmico · 2DSM
               </span>
+
               <h3>DDD Explorer</h3>
+
               <p class="project-description">
                 Aplicação para consulta de cidades por DDD com React e
                 TypeScript. Inclui modo claro/escuro, favoritos, histórico e
@@ -369,12 +431,15 @@
                 <span>LocalStorage</span>
               </div>
 
-              <div class="project-row-contribution">
+              <div class="project-secondary-contribution">
                 <strong>Minha evolução:</strong>
-                <span
-                  >Identidade visual · Modo claro/escuro · Filtro em tempo real
-                  · Favoritos com LocalStorage</span
-                >
+                <div class="contribution-tags">
+                  <span>🎨 Identidade visual</span>
+                  <span>🌓 Modo claro/escuro</span>
+                  <span>🔍 Filtro em tempo real</span>
+                  <span>⭐ Favoritos com LocalStorage</span>
+                  <span>📊 Histórico de consultas</span>
+                </div>
               </div>
 
               <div class="project-actions">
@@ -399,19 +464,21 @@
           </article>
 
           <!-- PROJETO 3 - EM BREVE -->
-          <article class="project-row project-row-coming">
-            <div class="project-row-image">
+          <article class="project-secondary project-secondary-coming">
+            <div class="project-secondary-image">
               <div class="coming-soon">
                 <span>🚧</span>
                 <p>Em desenvolvimento</p>
               </div>
             </div>
 
-            <div class="project-row-content">
+            <div class="project-secondary-content">
               <span class="project-badge project-badge-personal">
                 💻 Pessoal · Em andamento
               </span>
+
               <h3>Novo Projeto</h3>
+
               <p class="project-description">
                 Um novo projeto está sendo desenvolvido para aplicar
                 conhecimentos em desenvolvimento fullstack. Em breve mais
