@@ -530,10 +530,10 @@ img {
 }
 
 /* ============================================
-   PROJETOS - PRINCIPAL (SCRUMFLOW)
+   PROJETOS - PRINCIPAL
 ============================================ */
 
-.project-featured {
+.project-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
@@ -545,51 +545,68 @@ img {
   margin-bottom: 48px;
 }
 
-.project-featured:hover {
+.project-main:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
 
-.project-featured-image {
+.project-main-image {
   min-height: 480px;
   overflow: hidden;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-.project-featured-image img {
+.project-main-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.project-featured:hover .project-featured-image img {
+.project-main:hover .project-main-image img {
   transform: scale(1.04);
 }
 
-.project-featured-content {
+.project-main-content {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 36px 40px;
   overflow-y: auto;
-  max-height: 640px;
+  max-height: 600px;
 }
 
-.project-featured-content::-webkit-scrollbar {
+.project-main-content::-webkit-scrollbar {
   width: 4px;
 }
 
-.project-featured-content::-webkit-scrollbar-track {
+.project-main-content::-webkit-scrollbar-track {
   background: var(--background);
   border-radius: 4px;
 }
 
-.project-featured-content::-webkit-scrollbar-thumb {
+.project-main-content::-webkit-scrollbar-thumb {
   background: var(--primary-light);
   border-radius: 4px;
 }
 
-.project-featured-content h3 {
+.project-tag {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.project-tag-academic {
+  color: var(--primary);
+}
+
+.project-tag-personal {
+  color: #8b5cf6;
+}
+
+.project-main-content h3 {
   font-size: 32px;
   line-height: 1.1;
   margin-bottom: 12px;
@@ -600,7 +617,7 @@ img {
   color: var(--text-muted);
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .project-tech {
@@ -620,7 +637,9 @@ img {
   font-weight: 600;
 }
 
-/* ----- CONTRIBUIÇÕES EM CARDS ----- */
+/* ============================================
+   CONTRIBUIÇÕES
+============================================ */
 
 .contributions {
   margin-bottom: 24px;
@@ -633,41 +652,44 @@ img {
   margin-bottom: 14px;
 }
 
-.contributions-grid {
+.contributions-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
-.contribution-card {
-  padding: 14px 16px;
-  border: 1px solid var(--border);
+.contribution-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
   border-radius: var(--radius-small);
   background: var(--background-secondary);
+  border: 1px solid var(--border);
   transition: var(--transition);
 }
 
-.contribution-card:hover {
-  transform: translateY(-2px);
+.contribution-item:hover {
   border-color: var(--primary-light);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
   background: var(--white);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
 }
 
 .contribution-icon {
-  display: block;
   font-size: 16px;
-  margin-bottom: 4px;
+  line-height: 1.4;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
-.contribution-card strong {
+.contribution-item strong {
   display: block;
   font-size: 12px;
   color: var(--text);
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
-.contribution-card p {
+.contribution-item p {
   font-size: 11px;
   color: var(--text-muted);
   line-height: 1.4;
@@ -675,12 +697,12 @@ img {
 }
 
 /* ============================================
-   PROJETOS SECUNDÁRIOS - LADO A LADO
+   PROJETOS SECUNDÁRIOS
 ============================================ */
 
 .projects-secondary {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
 
@@ -725,9 +747,8 @@ img {
   padding: 24px;
 }
 
-.project-secondary-content .project-badge {
+.project-secondary-content .project-tag {
   font-size: 10px;
-  letter-spacing: 0.4px;
   margin-bottom: 6px;
 }
 
@@ -751,35 +772,35 @@ img {
   padding: 3px 8px;
 }
 
-/* ----- CONTRIBUIÇÃO EM TAGS ----- */
+/* ----- CONTRIBUIÇÃO MINI ----- */
 
-.project-secondary-contribution {
+.project-contribution-mini {
   margin-bottom: 16px;
 }
 
-.project-secondary-contribution strong {
+.project-contribution-mini strong {
   display: block;
   font-size: 12px;
   color: var(--text);
   margin-bottom: 6px;
 }
 
-.contribution-tags {
+.mini-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
-.contribution-tags span {
-  padding: 4px 10px;
+.mini-tags span {
+  padding: 3px 10px;
   border-radius: 12px;
   background: var(--background-secondary);
   border: 1px solid var(--border);
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-secondary);
 }
 
-/* ----- PROJETO EM BREVE ----- */
+/* ----- EM BREVE ----- */
 
 .project-secondary-coming .project-secondary-image {
   display: flex;
@@ -793,7 +814,7 @@ img {
 }
 
 .coming-soon span {
-  font-size: 40px;
+  font-size: 36px;
   display: block;
 }
 
@@ -802,6 +823,10 @@ img {
   font-weight: 600;
   margin: 4px 0 0;
 }
+
+/* ============================================
+   BOTÕES DOS PROJETOS
+============================================ */
 
 .project-actions {
   display: flex;
@@ -821,44 +846,44 @@ img {
 ============================================ */
 
 @media (max-width: 1024px) {
-  .project-featured {
+  .project-main {
     grid-template-columns: 1fr 1fr;
   }
 
-  .project-featured-image {
-    min-height: 380px;
+  .project-main-image {
+    min-height: 360px;
   }
 
-  .project-featured-content {
-    padding: 30px;
-    max-height: 560px;
+  .project-main-content {
+    padding: 28px 30px;
+    max-height: 520px;
   }
 
-  .contributions-grid {
+  .contributions-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .project-featured {
+  .project-main {
     grid-template-columns: 1fr;
   }
 
-  .project-featured-image {
-    min-height: 240px;
+  .project-main-image {
+    min-height: 220px;
   }
 
-  .project-featured-content {
+  .project-main-content {
     padding: 24px;
     max-height: none;
     overflow-y: visible;
   }
 
-  .project-featured-content h3 {
+  .project-main-content h3 {
     font-size: 26px;
   }
 
-  .contributions-grid {
+  .contributions-list {
     grid-template-columns: 1fr;
   }
 
@@ -881,16 +906,16 @@ img {
 }
 
 @media (max-width: 480px) {
-  .project-featured-content {
+  .project-main-content {
     padding: 18px;
   }
 
-  .project-featured-content h3 {
+  .project-main-content h3 {
     font-size: 22px;
   }
 
-  .project-featured-image {
-    min-height: 200px;
+  .project-main-image {
+    min-height: 180px;
   }
 
   .project-secondary-content {
@@ -899,6 +924,10 @@ img {
 
   .project-secondary-content h3 {
     font-size: 18px;
+  }
+
+  .project-secondary-image {
+    height: 160px;
   }
 
   .project-actions {
@@ -911,12 +940,9 @@ img {
     justify-content: center;
   }
 
-  .contribution-tags {
+  .mini-tags {
     flex-direction: column;
-  }
-
-  .contribution-tags span {
-    width: fit-content;
+    align-items: flex-start;
   }
 }
 /* ============================================
