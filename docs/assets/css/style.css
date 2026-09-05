@@ -530,19 +530,19 @@ img {
 }
 
 /* ============================================
-   PROJETOS - PRINCIPAL
+   PROJETOS
 ============================================ */
 
 .project-main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   overflow: hidden;
+  margin-bottom: 40px;
+  border: 1px solid var(--border);
   border-radius: var(--radius-large);
   background: var(--white);
-  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: var(--transition);
-  margin-bottom: 48px;
 }
 
 .project-main:hover {
@@ -550,10 +550,14 @@ img {
   box-shadow: var(--shadow-hover);
 }
 
+/* ============================================
+   SCRUMFLOW - IMAGEM
+============================================ */
+
 .project-main-image {
-  min-height: 480px;
+  min-height: 560px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: var(--dark);
 }
 
 .project-main-image img {
@@ -564,36 +568,24 @@ img {
 }
 
 .project-main:hover .project-main-image img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
+
+/* ============================================
+   SCRUMFLOW - CONTEÚDO
+============================================ */
 
 .project-main-content {
   display: flex;
   flex-direction: column;
-  padding: 36px 40px;
-  overflow-y: auto;
-  max-height: 600px;
-}
-
-.project-main-content::-webkit-scrollbar {
-  width: 4px;
-}
-
-.project-main-content::-webkit-scrollbar-track {
-  background: var(--background);
-  border-radius: 4px;
-}
-
-.project-main-content::-webkit-scrollbar-thumb {
-  background: var(--primary-light);
-  border-radius: 4px;
+  padding: 38px;
 }
 
 .project-tag {
   display: inline-block;
   width: fit-content;
-  margin-bottom: 10px;
-  font-size: 12px;
+  margin-bottom: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
@@ -607,28 +599,32 @@ img {
 }
 
 .project-main-content h3 {
-  font-size: 32px;
-  line-height: 1.1;
   margin-bottom: 12px;
   color: var(--dark);
+  font-size: 34px;
+  line-height: 1.1;
 }
 
 .project-description {
+  margin-bottom: 16px;
   color: var(--text-muted);
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 16px;
 }
+
+/* ============================================
+   TECNOLOGIAS
+============================================ */
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .project-tech span {
-  padding: 4px 10px;
+  padding: 4px 9px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--background);
@@ -638,62 +634,114 @@ img {
 }
 
 /* ============================================
-   CONTRIBUIÇÕES
+   MINHAS CONTRIBUIÇÕES
 ============================================ */
 
-.contributions {
+.project-contributions {
+  margin-top: 2px;
   margin-bottom: 24px;
 }
 
-.contributions-title {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 14px;
+.contributions-header {
+  margin-bottom: 12px;
 }
 
-.contributions-list {
+.contributions-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contributions-header h4 {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ============================================
+   GRID DAS CONTRIBUIÇÕES
+============================================ */
+
+.contributions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 7px;
 }
 
 .contribution-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 12px 14px;
+  gap: 9px;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid var(--border);
   border-radius: var(--radius-small);
   background: var(--background-secondary);
-  border: 1px solid var(--border);
   transition: var(--transition);
 }
 
 .contribution-item:hover {
   border-color: var(--primary-light);
   background: var(--white);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+  transform: translateY(-1px);
 }
 
 .contribution-icon {
-  font-size: 16px;
-  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  margin-top: 1px;
+  border-radius: 7px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+  font-size: 8px;
+  font-weight: 800;
 }
 
 .contribution-item strong {
   display: block;
-  font-size: 12px;
+  margin-bottom: 1px;
   color: var(--text);
-  margin-bottom: 2px;
+  font-size: 11px;
 }
 
 .contribution-item p {
-  font-size: 11px;
-  color: var(--text-muted);
-  line-height: 1.4;
   margin: 0;
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+/* ============================================
+   BOTÕES DOS PROJETOS
+============================================ */
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-actions .btn {
+  min-height: 40px;
+}
+
+.project-actions .btn-small {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 11px;
+}
+
+.project-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* ============================================
@@ -710,9 +758,9 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--white);
-  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   transition: var(--transition);
 }
@@ -722,11 +770,15 @@ img {
   box-shadow: var(--shadow-hover);
 }
 
+/* ============================================
+   IMAGEM DOS PROJETOS SECUNDÁRIOS
+============================================ */
+
 .project-secondary-image {
-  height: 200px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  height: 220px;
   flex-shrink: 0;
+  overflow: hidden;
+  background: var(--dark);
 }
 
 .project-secondary-image img {
@@ -737,52 +789,49 @@ img {
 }
 
 .project-secondary:hover .project-secondary-image img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
+
+/* ============================================
+   CONTEÚDO DOS PROJETOS SECUNDÁRIOS
+============================================ */
 
 .project-secondary-content {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 24px;
+  padding: 25px;
 }
 
 .project-secondary-content .project-tag {
-  font-size: 10px;
   margin-bottom: 6px;
+  font-size: 10px;
 }
 
 .project-secondary-content h3 {
-  font-size: 22px;
-  color: var(--dark);
   margin-bottom: 8px;
+  color: var(--dark);
+  font-size: 22px;
 }
 
 .project-secondary-content .project-description {
+  margin-bottom: 14px;
   font-size: 13px;
-  margin-bottom: 14px;
 }
 
-.project-secondary-content .project-tech {
-  margin-bottom: 14px;
-}
-
-.project-secondary-content .project-tech span {
-  font-size: 9px;
-  padding: 3px 8px;
-}
-
-/* ----- CONTRIBUIÇÃO MINI ----- */
+/* ============================================
+   CONTRIBUIÇÃO RESUMIDA
+============================================ */
 
 .project-contribution-mini {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .project-contribution-mini strong {
   display: block;
-  font-size: 12px;
+  margin-bottom: 7px;
   color: var(--text);
-  margin-bottom: 6px;
+  font-size: 11px;
 }
 
 .mini-tags {
@@ -792,15 +841,17 @@ img {
 }
 
 .mini-tags span {
-  padding: 3px 10px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--background-secondary);
-  border: 1px solid var(--border);
-  font-size: 10px;
   color: var(--text-secondary);
+  font-size: 9px;
 }
 
-/* ----- EM BREVE ----- */
+/* ============================================
+   PROJETO EM BREVE
+============================================ */
 
 .project-secondary-coming .project-secondary-image {
   display: flex;
@@ -810,35 +861,18 @@ img {
 
 .coming-soon {
   text-align: center;
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .coming-soon span {
-  font-size: 36px;
   display: block;
+  font-size: 36px;
 }
 
 .coming-soon p {
-  font-size: 13px;
+  margin-top: 4px;
+  font-size: 12px;
   font-weight: 600;
-  margin: 4px 0 0;
-}
-
-/* ============================================
-   BOTÕES DOS PROJETOS
-============================================ */
-
-.project-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.project-actions .btn-small {
-  font-size: 11px;
-  min-height: 36px;
-  padding: 0 14px;
 }
 
 /* ============================================
@@ -851,16 +885,15 @@ img {
   }
 
   .project-main-image {
-    min-height: 360px;
+    min-height: 520px;
   }
 
   .project-main-content {
-    padding: 28px 30px;
-    max-height: 520px;
+    padding: 30px;
   }
 
-  .contributions-list {
-    grid-template-columns: 1fr 1fr;
+  .contributions-grid {
+    gap: 6px;
   }
 }
 
@@ -870,21 +903,19 @@ img {
   }
 
   .project-main-image {
-    min-height: 220px;
+    min-height: 260px;
   }
 
   .project-main-content {
-    padding: 24px;
-    max-height: none;
-    overflow-y: visible;
+    padding: 25px;
   }
 
   .project-main-content h3 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
-  .contributions-list {
-    grid-template-columns: 1fr;
+  .contributions-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .projects-secondary {
@@ -893,7 +924,25 @@ img {
   }
 
   .project-secondary-image {
-    height: 180px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-main-image {
+    min-height: 190px;
+  }
+
+  .project-main-content {
+    padding: 20px;
+  }
+
+  .project-main-content h3 {
+    font-size: 24px;
+  }
+
+  .contributions-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-secondary-content {
@@ -903,41 +952,14 @@ img {
   .project-secondary-content h3 {
     font-size: 20px;
   }
-}
-
-@media (max-width: 480px) {
-  .project-main-content {
-    padding: 18px;
-  }
-
-  .project-main-content h3 {
-    font-size: 22px;
-  }
-
-  .project-main-image {
-    min-height: 180px;
-  }
-
-  .project-secondary-content {
-    padding: 16px;
-  }
-
-  .project-secondary-content h3 {
-    font-size: 18px;
-  }
-
-  .project-secondary-image {
-    height: 160px;
-  }
 
   .project-actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .project-actions .btn-small {
+  .project-actions .btn {
     width: 100%;
-    justify-content: center;
   }
 
   .mini-tags {
@@ -945,6 +967,7 @@ img {
     align-items: flex-start;
   }
 }
+
 /* ============================================
    FORMAÇÃO
 ============================================ */
