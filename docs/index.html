@@ -1,47 +1,61 @@
 <!doctype html>
-
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta
       name="description"
       content="Portfólio de Marcello Parise, estudante de Desenvolvimento de Software Multiplataforma na FATEC Jacareí."
     />
-
     <title>Marcello Parise | Desenvolvedor em formação</title>
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
     <!-- CSS -->
-
-    <link rel="stylesheet" href="/ra2581392613005/assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
     <!-- ============================================
+         NAVBAR
+    ============================================= -->
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <div class="container navbar-container">
+        <a href="#" class="logo">Marcello<span class="logo-dot">.</span></a>
+
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Menu mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ============================================
          HERO
     ============================================= -->
-
-    <header class="hero">
+    <header class="hero" id="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <span class="badge"> FATEC Jacareí · DSM </span>
+          <span class="badge">FATEC Jacareí · DSM</span>
 
           <h1>
             Olá, eu sou
-            <span class="highlight"> Marcello Parise </span>
+            <span class="highlight">Marcello Parise</span>
           </h1>
 
           <p class="hero-subtitle">
@@ -51,17 +65,17 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#projetos" class="btn btn-primary"> Ver projetos </a>
-
-            <a href="#contato" class="btn btn-secondary"> Entrar em contato </a>
+            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+            <a href="#contato" class="btn btn-secondary">Entrar em contato</a>
           </div>
         </div>
 
-        <!-- FOTO -->
-
         <div class="hero-image">
-          <div class="avatar-placeholder">
-            <span>MP</span>
+          <div class="avatar">
+            <span class="avatar-initials">MP</span>
+            <!-- Quando tiver a foto, substitua o span acima por:
+                    <img src="assets/img/sua-foto.jpg" alt="Marcello Parise" />
+                    -->
           </div>
         </div>
       </div>
@@ -70,12 +84,10 @@
     <!-- ============================================
          SOBRE
     ============================================= -->
-
     <section id="sobre" class="section">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label"> Sobre mim </span>
-
+          <span class="section-label">Sobre mim</span>
           <h2 class="section-title">Conheça minha trajetória</h2>
         </div>
 
@@ -83,7 +95,7 @@
           <div class="sobre-texto">
             <p>
               Sou estudante de
-              <strong> Desenvolvimento de Software Multiplataforma </strong>
+              <strong>Desenvolvimento de Software Multiplataforma</strong>
               na FATEC Jacareí, atualmente no 2º semestre da graduação.
             </p>
 
@@ -99,19 +111,16 @@
               estágio na área de tecnologia.
             </p>
 
-            <div class="sobre-detalhes">
-              <span> Jacareí — SP </span>
-
-              <span> 2º semestre DSM </span>
-
-              <span> Desenvolvimento Web </span>
+            <div class="sobre-tags">
+              <span class="tag">Jacareí — SP</span>
+              <span class="tag">2º semestre DSM</span>
+              <span class="tag">Desenvolvimento Web</span>
             </div>
           </div>
 
           <div class="sobre-destaque">
             <div class="destaque-box">
-              <span class="destaque-numero"> 2º </span>
-
+              <span class="destaque-numero">2º</span>
               <span class="destaque-label">
                 Semestre de Desenvolvimento de Software Multiplataforma
               </span>
@@ -124,14 +133,11 @@
     <!-- ============================================
          HABILIDADES
     ============================================= -->
-
     <section id="habilidades" class="section section-dark">
       <div class="container">
         <div class="section-heading section-heading-light">
-          <span class="section-label"> Conhecimentos </span>
-
+          <span class="section-label">Conhecimentos</span>
           <h2 class="section-title">Habilidades</h2>
-
           <p class="section-subtitle">
             Tecnologias e ferramentas que fazem parte da minha formação e dos
             projetos que venho desenvolvendo.
@@ -140,14 +146,10 @@
 
         <div class="habilidades-grid">
           <!-- FRONT-END -->
-
           <article class="habilidade-card">
             <div class="habilidade-icon">&lt;/&gt;</div>
-
             <h3>Front-end</h3>
-
             <p>Desenvolvimento de interfaces e aplicações para web.</p>
-
             <div class="tecnologias">
               <span>HTML</span>
               <span>CSS</span>
@@ -157,17 +159,13 @@
           </article>
 
           <!-- BACK-END -->
-
           <article class="habilidade-card">
             <div class="habilidade-icon">{ }</div>
-
             <h3>Back-end</h3>
-
             <p>
               Desenvolvimento de aplicações, APIs e integração entre diferentes
               camadas do sistema.
             </p>
-
             <div class="tecnologias">
               <span>Node.js</span>
               <span>Express</span>
@@ -177,17 +175,13 @@
           </article>
 
           <!-- BANCO -->
-
           <article class="habilidade-card">
             <div class="habilidade-icon">DB</div>
-
             <h3>Banco de Dados</h3>
-
             <p>
               Modelagem, consultas, manipulação e integração de dados em
               aplicações.
             </p>
-
             <div class="tecnologias">
               <span>PostgreSQL</span>
               <span>SQL</span>
@@ -195,17 +189,13 @@
           </article>
 
           <!-- FERRAMENTAS -->
-
           <article class="habilidade-card">
             <div class="habilidade-icon">&gt;_</div>
-
             <h3>Ferramentas</h3>
-
             <p>
               Ferramentas utilizadas no desenvolvimento, versionamento e
               execução de projetos.
             </p>
-
             <div class="tecnologias">
               <span>Git</span>
               <span>GitHub</span>
@@ -217,43 +207,34 @@
       </div>
     </section>
 
-    <!-- ======================================================
-     PROJETOS
-     ====================================================== -->
-
+    <!-- ============================================
+         PROJETOS
+    ============================================= -->
     <section id="projetos" class="section">
       <div class="container">
-        <!-- TÍTULO DA SEÇÃO -->
         <div class="section-heading">
           <span class="section-label">Projetos</span>
-
-          <h2>Projetos que representam minha evolução</h2>
-
-          <p>
+          <h2 class="section-title">Projetos que representam minha evolução</h2>
+          <p class="section-subtitle">
             Projetos acadêmicos e aplicações desenvolvidas ao longo da minha
             formação em Desenvolvimento de Software Multiplataforma.
           </p>
         </div>
 
-        <!-- ==================================================
-         PROJETO PRINCIPAL — SCRUMFLOW
-         ================================================== -->
-
-        <article class="project-card project-card-featured">
-          <!-- IMAGEM -->
-
-          <div class="project-image">
+        <!-- ==========================================
+                 PROJETO PRINCIPAL - SCRUMFLOW
+            ========================================== -->
+        <article class="project-featured">
+          <div class="project-featured-image">
             <img
               src="assets/img/scrumflow.jpg"
-              alt="Tela do projeto ScrumFlow"
+              alt="ScrumFlow - Portal de Certificação em Metodologias Ágeis"
             />
           </div>
 
-          <!-- CONTEÚDO -->
-
-          <div class="project-content">
-            <span class="project-type">
-              Projeto Integrador (ABP) · 1DSM · 1º Sem. 2026
+          <div class="project-featured-content">
+            <span class="project-badge project-badge-academic">
+              📚 Acadêmico · Projeto Integrador (ABP) · 1DSM · 1º Sem. 2026
             </span>
 
             <h3>ScrumFlow</h3>
@@ -266,8 +247,7 @@
             </p>
 
             <!-- TECNOLOGIAS -->
-
-            <div class="project-technologies">
+            <div class="project-tech">
               <span>HTML5</span>
               <span>CSS3</span>
               <span>JavaScript</span>
@@ -277,37 +257,68 @@
               <span>JWT</span>
             </div>
 
-            <!-- MINHA ATUAÇÃO -->
+            <!-- MINHA CONTRIBUIÇÃO EM CARDS -->
+            <div class="contributions">
+              <h4 class="contributions-title">Minha contribuição no projeto</h4>
 
-            <div class="project-summary">
-              <strong>Minha atuação</strong>
+              <div class="contributions-grid">
+                <div class="contribution-card">
+                  <span class="contribution-icon">⚙️</span>
+                  <strong>Backend & APIs</strong>
+                  <p>
+                    Desenvolvimento do backend com Node.js e Express, incluindo
+                    rotas, controllers e middlewares.
+                  </p>
+                </div>
 
-              <ul>
-                <li>
-                  Desenvolvimento do backend e APIs com Node.js e Express.
-                </li>
+                <div class="contribution-card">
+                  <span class="contribution-icon">🔐</span>
+                  <strong>Autenticação</strong>
+                  <p>
+                    Implementação de autenticação JWT, sessões e bcrypt para
+                    segurança de dados.
+                  </p>
+                </div>
 
-                <li>Implementação de autenticação JWT, sessões e bcrypt.</li>
+                <div class="contribution-card">
+                  <span class="contribution-icon">📊</span>
+                  <strong>Banco de Dados</strong>
+                  <p>
+                    Modelagem PostgreSQL, desenvolvimento de diagramas UML e
+                    consultas SQL.
+                  </p>
+                </div>
 
-                <li>
-                  Atuação no backend administrativo, incluindo recuperação de
-                  senha, integração do authAdmin e notas por módulo.
-                </li>
+                <div class="contribution-card">
+                  <span class="contribution-icon">🎨</span>
+                  <strong>Frontend & Integração</strong>
+                  <p>
+                    Refatoração de frontend, CSS, JavaScript e integração entre
+                    frontend e backend.
+                  </p>
+                </div>
 
-                <li>
-                  Participação na modelagem do PostgreSQL e desenvolvimento de
-                  diagramas UML.
-                </li>
+                <div class="contribution-card">
+                  <span class="contribution-icon">🛠️</span>
+                  <strong>Funcionalidades Admin</strong>
+                  <p>
+                    Implementação do authAdmin, recuperação de senha e notas por
+                    módulo.
+                  </p>
+                </div>
 
-                <li>
-                  Refatoração de frontend, CSS, JavaScript e integração entre
-                  frontend e backend.
-                </li>
-              </ul>
+                <div class="contribution-card">
+                  <span class="contribution-icon">📝</span>
+                  <strong>Documentação</strong>
+                  <p>
+                    Documentação da API e estruturação do projeto para facilitar
+                    a manutenção.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <!-- BOTÕES -->
-
             <div class="project-actions">
               <a
                 href="https://github.com/mparise28-dev/ABP1-scrum-flow"
@@ -317,7 +328,6 @@
               >
                 Ver projeto
               </a>
-
               <a
                 href="https://github.com/mparise28-dev/ABP1-scrum-flow"
                 target="_blank"
@@ -330,40 +340,33 @@
           </div>
         </article>
 
-        <!-- ==================================================
-         PROJETOS SECUNDÁRIOS
-         ================================================== -->
-
+        <!-- ==========================================
+                 PROJETOS SECUNDÁRIOS
+            ========================================== -->
         <div class="projects-grid">
-          <!-- ==================================================
-           PROJETO 02 — DDD EXPLORER
-           ================================================== -->
-
-          <article class="project-card project-card-secondary">
-            <div class="project-image">
+          <!-- PROJETO 2 - DDD EXPLORER -->
+          <article class="project-card">
+            <div class="project-card-image">
               <img
                 src="assets/img/ddd-explorer.png"
-                alt="Tela do projeto DDD Explorer"
+                alt="DDD Explorer - Consulta de cidades por DDD"
               />
             </div>
 
-            <div class="project-content">
-              <span class="project-type">
-                Projeto Acadêmico · Desenvolvimento Web 2 · 2DSM
+            <div class="project-card-content">
+              <span class="project-badge project-badge-academic">
+                📚 Acadêmico · Desenvolvimento Web 2 · 2DSM
               </span>
 
               <h3>DDD Explorer</h3>
 
               <p class="project-description">
-                Aplicação iniciada em sala de aula para consulta de cidades por
-                DDD. A partir da versão inicial, ampliei o projeto
-                individualmente com novas funcionalidades e melhorias de
-                interface utilizando React e TypeScript.
+                Aplicação para consulta de cidades por DDD, desenvolvida com
+                React e TypeScript. Inclui modo claro/escuro, favoritos,
+                histórico e filtro em tempo real.
               </p>
 
-              <!-- TECNOLOGIAS -->
-
-              <div class="project-technologies">
+              <div class="project-tech">
                 <span>React</span>
                 <span>TypeScript</span>
                 <span>Vite</span>
@@ -373,41 +376,30 @@
                 <span>LocalStorage</span>
               </div>
 
-              <!-- MINHA ATUAÇÃO -->
-
-              <div class="project-summary">
-                <strong>Minha evolução</strong>
-
+              <div class="contributions-mini">
+                <strong>Minha evolução:</strong>
                 <ul>
-                  <li>Criação da identidade visual e estilização completa.</li>
-
-                  <li>Implementação de modo claro e escuro.</li>
-
-                  <li>Filtro de cidades em tempo real.</li>
-
-                  <li>Sistema de favoritos e histórico com LocalStorage.</li>
-
-                  <li>Melhorias de responsividade e experiência do usuário.</li>
+                  <li>Criação da identidade visual e estilização completa</li>
+                  <li>Modo claro e escuro</li>
+                  <li>Filtro de cidades em tempo real</li>
+                  <li>Sistema de favoritos e histórico com LocalStorage</li>
                 </ul>
               </div>
-
-              <!-- BOTÕES -->
 
               <div class="project-actions">
                 <a
                   href="https://ddd-explorer.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-primary"
+                  class="btn btn-primary btn-small"
                 >
                   Ver projeto
                 </a>
-
                 <a
                   href="https://github.com/mparise28-dev/ddd-explorer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-secondary"
+                  class="btn btn-secondary btn-small"
                 >
                   GitHub
                 </a>
@@ -415,57 +407,39 @@
             </div>
           </article>
 
-          <!-- ==================================================
-           PROJETO 03
-           ================================================== -->
-
-          <article class="project-card project-card-secondary">
-            <div class="project-image">
-              <img
-                src="assets/img/projeto-03.png"
-                alt="Tela do terceiro projeto"
-              />
+          <!-- PROJETO 3 - EM BREVE -->
+          <article class="project-card project-card-coming">
+            <div class="project-card-image">
+              <div class="coming-soon">
+                <span>🚧</span>
+                <p>Em desenvolvimento</p>
+              </div>
             </div>
 
-            <div class="project-content">
-              <span class="project-type"> Projeto Acadêmico · 2DSM </span>
+            <div class="project-card-content">
+              <span class="project-badge project-badge-personal">
+                💻 Pessoal · Em andamento
+              </span>
 
-              <h3>Projeto 03</h3>
+              <h3>Novo Projeto</h3>
 
               <p class="project-description">
-                Projeto desenvolvido durante minha formação em Desenvolvimento
-                de Software Multiplataforma, aplicando conhecimentos adquiridos
-                no curso.
+                Um novo projeto está sendo desenvolvido para aplicar
+                conhecimentos em desenvolvimento fullstack. Em breve mais
+                novidades!
               </p>
 
-              <!-- TECNOLOGIAS -->
-
-              <div class="project-technologies">
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>Banco de Dados</span>
+              <div class="project-tech">
+                <span>Em breve</span>
               </div>
-
-              <!-- RESUMO -->
-
-              <div class="project-summary">
-                <strong>Desenvolvimento</strong>
-
-                <ul>
-                  <li>Aplicação prática dos conhecimentos adquiridos.</li>
-
-                  <li>Desenvolvimento e evolução da solução.</li>
-
-                  <li>Integração entre diferentes tecnologias.</li>
-                </ul>
-              </div>
-
-              <!-- BOTÕES -->
 
               <div class="project-actions">
-                <a href="#" class="btn btn-primary"> Ver projeto </a>
-
-                <a href="#" class="btn btn-secondary"> GitHub </a>
+                <span
+                  class="btn btn-primary btn-small"
+                  style="opacity: 0.5; cursor: not-allowed"
+                >
+                  Em breve
+                </span>
               </div>
             </div>
           </article>
@@ -476,74 +450,56 @@
     <!-- ============================================
          FORMAÇÃO
     ============================================= -->
-
     <section id="formacao" class="section section-light">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label"> Formação </span>
-
+          <span class="section-label">Formação</span>
           <h2 class="section-title">Formação acadêmica</h2>
         </div>
 
         <div class="formacao-card">
           <div class="formacao-data">2026</div>
-
           <div class="formacao-conteudo">
-            <span class="formacao-instituicao"> FATEC Jacareí </span>
-
+            <span class="formacao-instituicao">FATEC Jacareí</span>
             <h3>Desenvolvimento de Software Multiplataforma</h3>
-
             <p>
               Graduação tecnológica com formação em desenvolvimento de software,
               desenvolvimento web, programação, bancos de dados e tecnologias
               multiplataforma.
             </p>
-
-            <span class="formacao-status"> Em andamento · 2º semestre </span>
+            <span class="formacao-status">Em andamento · 2º semestre</span>
           </div>
         </div>
 
-        <!-- ========================================
-             CURSOS E FORMAÇÃO COMPLEMENTAR
-        ========================================= -->
-
+        <!-- CURSOS COMPLEMENTARES -->
         <div class="cursos-complementares">
           <div class="section-heading">
-            <span class="section-label"> Formação complementar </span>
-
+            <span class="section-label">Formação complementar</span>
             <h2 class="section-title">Cursos</h2>
           </div>
 
           <div class="cursos-grid">
             <article class="curso-card">
-              <span class="curso-tipo"> Backend </span>
-
+              <span class="curso-tipo">Backend</span>
               <h3>Desenvolvimento em Backend</h3>
-
               <p>Venturus</p>
             </article>
 
             <article class="curso-card">
-              <span class="curso-tipo"> Redes </span>
-
+              <span class="curso-tipo">Redes</span>
               <h3>Redes</h3>
-
               <p>Cisco</p>
             </article>
 
             <article class="curso-card">
-              <span class="curso-tipo"> Versionamento </span>
-
+              <span class="curso-tipo">Versionamento</span>
               <h3>Git</h3>
-
               <p>Cursa</p>
             </article>
 
             <article class="curso-card">
-              <span class="curso-tipo"> Idioma </span>
-
+              <span class="curso-tipo">Idioma</span>
               <h3>Inglês</h3>
-
               <p>Cursando · Nível intermediário</p>
             </article>
           </div>
@@ -554,14 +510,11 @@
     <!-- ============================================
          CONTATO
     ============================================= -->
-
     <section id="contato" class="section section-dark">
       <div class="container">
         <div class="section-heading section-heading-light">
-          <span class="section-label"> Contato </span>
-
+          <span class="section-label">Contato</span>
           <h2 class="section-title">Vamos conversar?</h2>
-
           <p class="section-subtitle">
             Estou aberto a oportunidades de estágio, projetos e conexões
             profissionais.
@@ -571,7 +524,6 @@
         <div class="contato-grid">
           <div class="contato-info">
             <h3>Entre em contato</h3>
-
             <p>
               Se quiser conhecer meu trabalho, trocar uma ideia sobre tecnologia
               ou conversar sobre oportunidades, você pode me encontrar pelos
@@ -579,39 +531,31 @@
             </p>
 
             <div class="contato-links">
-              <!-- LinkedIn -->
-
               <a
                 href="https://www.linkedin.com/in/marcello-parise-campbell-fonseca-147965194/"
-                class="contato-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="contato-link"
               >
-                <span class="contato-icon"> in </span>
-
-                <span> LinkedIn </span>
+                <span class="contato-icon">in</span>
+                <span>LinkedIn</span>
               </a>
-
-              <!-- GitHub -->
 
               <a
                 href="https://github.com/mparise28-dev"
-                class="contato-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="contato-link"
               >
-                <span class="contato-icon"> &lt;/&gt; </span>
-
-                <span> GitHub </span>
+                <span class="contato-icon">&lt;/&gt;</span>
+                <span>GitHub</span>
               </a>
             </div>
           </div>
 
           <div class="contato-box">
-            <span class="contato-box-label"> Atualmente </span>
-
+            <span class="contato-box-label">Atualmente</span>
             <h3>Em busca de oportunidades</h3>
-
             <p>
               Estou construindo minha experiência profissional através de
               projetos acadêmicos e pessoais, buscando minha primeira
@@ -625,17 +569,37 @@
     <!-- ============================================
          FOOTER
     ============================================= -->
-
     <footer class="footer">
       <div class="container">
         <p>
           © 2026
-
-          <strong> Marcello Parise Campbell Fonseca </strong>
+          <strong>Marcello Parise Campbell Fonseca</strong>
         </p>
-
         <p>Desenvolvimento de Software Multiplataforma · FATEC Jacareí</p>
       </div>
     </footer>
+
+    <!-- JavaScript para menu mobile -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (toggle) {
+          toggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+            toggle.classList.toggle("active");
+          });
+        }
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+            toggle.classList.remove("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

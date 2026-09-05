@@ -27,6 +27,8 @@
   --radius-large: 24px;
 
   --transition: 0.3s ease;
+  --shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
+  --shadow-hover: 0 20px 50px rgba(15, 23, 42, 0.1);
 }
 
 /* ============================================
@@ -86,20 +88,16 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background: rgba(15, 23, 42, 0.96);
   backdrop-filter: blur(10px);
-
   border-bottom: 1px solid var(--dark-border);
 }
 
 .navbar-container {
   min-height: 72px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
 
@@ -108,12 +106,15 @@ img {
   font-size: 21px;
   font-weight: 800;
   letter-spacing: -0.5px;
-
   transition: var(--transition);
 }
 
 .logo:hover {
   color: var(--primary-light);
+}
+
+.logo-dot {
+  color: var(--primary);
 }
 
 .nav-links {
@@ -124,26 +125,20 @@ img {
 
 .nav-links a {
   position: relative;
-
   color: #cbd5e1;
   font-size: 14px;
   font-weight: 500;
-
   transition: var(--transition);
 }
 
 .nav-links a::after {
   content: "";
-
   position: absolute;
   left: 0;
   bottom: -7px;
-
   width: 0;
   height: 2px;
-
   background: var(--primary);
-
   transition: width var(--transition);
 }
 
@@ -155,20 +150,47 @@ img {
   width: 100%;
 }
 
+/* Menu Mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ============================================
    HERO
 ============================================ */
 
 .hero {
   min-height: 100vh;
-
   display: flex;
   align-items: center;
-
   padding: 130px 0 80px;
-
   color: var(--white);
-
   background:
     radial-gradient(
       circle at 80% 30%,
@@ -182,7 +204,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 80px;
 }
 
@@ -193,19 +214,13 @@ img {
 
 .badge {
   display: inline-block;
-
   padding: 7px 15px;
-
   border: 1px solid rgba(96, 165, 250, 0.3);
   border-radius: 50px;
-
   background: rgba(37, 99, 235, 0.15);
-
   color: var(--primary-light);
-
   font-size: 13px;
   font-weight: 600;
-
   margin-bottom: 22px;
 }
 
@@ -214,13 +229,11 @@ img {
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
-
   margin-bottom: 22px;
 }
 
 .highlight {
   background: linear-gradient(135deg, var(--primary-light), var(--primary));
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -228,12 +241,9 @@ img {
 
 .hero-subtitle {
   max-width: 650px;
-
   color: #94a3b8;
-
   font-size: 19px;
   line-height: 1.7;
-
   margin-bottom: 34px;
 }
 
@@ -244,45 +254,38 @@ img {
 }
 
 /* ============================================
-   FOTO / AVATAR
+   AVATAR
 ============================================ */
 
 .hero-image {
   flex: 0 0 300px;
 }
 
-.avatar-placeholder {
+.avatar {
   width: 300px;
   height: 300px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-
   border: 4px solid var(--primary-light);
-
   box-shadow:
     0 0 0 12px rgba(37, 99, 235, 0.08),
     0 0 70px rgba(37, 99, 235, 0.25);
+  overflow: hidden;
 }
 
-.avatar-placeholder span {
+.avatar-initials {
   font-size: 72px;
   font-weight: 800;
-
   color: rgba(255, 255, 255, 0.9);
 }
 
-.avatar-placeholder img {
+.avatar img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   border-radius: 50%;
 }
 
@@ -294,20 +297,13 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 48px;
-
   padding: 0 24px;
-
   border-radius: 10px;
-
   font-size: 14px;
   font-weight: 600;
-
   border: 1px solid transparent;
-
   cursor: pointer;
-
   transition: var(--transition);
 }
 
@@ -318,34 +314,26 @@ img {
 
 .btn-primary:hover {
   background: var(--primary-dark);
-
   transform: translateY(-2px);
-
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
 }
 
 .btn-secondary {
   color: var(--white);
-
   border-color: #475569;
-
   background: transparent;
 }
 
 .btn-secondary:hover {
   border-color: var(--primary-light);
   color: var(--primary-light);
-
   transform: translateY(-2px);
 }
 
 .btn-small {
   min-height: 40px;
-
   padding: 0 17px;
-
   font-size: 13px;
-
   border-radius: 8px;
 }
 
@@ -368,9 +356,7 @@ img {
 
 .section-heading {
   max-width: 720px;
-
   margin: 0 auto 55px;
-
   text-align: center;
 }
 
@@ -380,15 +366,11 @@ img {
 
 .section-label {
   display: inline-block;
-
   color: var(--primary);
-
   font-size: 13px;
   font-weight: 700;
-
   text-transform: uppercase;
   letter-spacing: 1.5px;
-
   margin-bottom: 10px;
 }
 
@@ -398,11 +380,9 @@ img {
 
 .section-title {
   font-size: clamp(30px, 4vw, 40px);
-
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -1px;
-
   margin-bottom: 15px;
 }
 
@@ -421,19 +401,14 @@ img {
 
 .sobre-grid {
   display: grid;
-
   grid-template-columns: 1.7fr 1fr;
-
   gap: 70px;
-
   align-items: center;
 }
 
 .sobre-texto p {
   color: var(--text-secondary);
-
   font-size: 17px;
-
   margin-bottom: 18px;
 }
 
@@ -441,33 +416,22 @@ img {
   color: var(--text);
 }
 
-.sobre-detalhes {
+.sobre-tags {
   display: flex;
   flex-wrap: wrap;
-
   gap: 10px;
-
   margin-top: 28px;
 }
 
-.sobre-detalhes span {
+.tag {
   padding: 7px 14px;
-
   background: var(--background-secondary);
-
   border: 1px solid var(--border);
-
   border-radius: 50px;
-
   color: var(--text-secondary);
-
   font-size: 13px;
   font-weight: 600;
 }
-
-/* ============================================
-   DESTAQUE SOBRE
-============================================ */
 
 .sobre-destaque {
   display: flex;
@@ -476,38 +440,26 @@ img {
 
 .destaque-box {
   width: 100%;
-
   padding: 40px 30px;
-
   text-align: center;
-
   border-radius: var(--radius-large);
-
   background: var(--dark);
-
   border: 1px solid var(--dark-border);
-
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
 }
 
 .destaque-numero {
   display: block;
-
   color: var(--primary-light);
-
   font-size: 58px;
   font-weight: 800;
-
   line-height: 1;
-
   margin-bottom: 15px;
 }
 
 .destaque-label {
   display: block;
-
   color: #cbd5e1;
-
   font-size: 14px;
   line-height: 1.6;
 }
@@ -518,532 +470,343 @@ img {
 
 .habilidades-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 22px;
 }
 
 .habilidade-card {
   padding: 30px 24px;
-
   border: 1px solid var(--dark-border);
-
   border-radius: var(--radius);
-
   background: var(--dark-secondary);
-
   transition: var(--transition);
 }
 
 .habilidade-card:hover {
   transform: translateY(-6px);
-
   border-color: var(--primary);
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 .habilidade-icon {
   width: 48px;
   height: 48px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 20px;
-
   border-radius: 12px;
-
   background: rgba(37, 99, 235, 0.12);
-
   color: var(--primary-light);
-
   font-size: 17px;
   font-weight: 800;
 }
 
 .habilidade-card h3 {
   color: var(--white);
-
   font-size: 19px;
-
   margin-bottom: 8px;
 }
 
 .habilidade-card p {
   color: #94a3b8;
-
   font-size: 14px;
-
   margin-bottom: 20px;
 }
-
-/* ============================================
-   TECNOLOGIAS
-============================================ */
 
 .tecnologias {
   display: flex;
   flex-wrap: wrap;
-
   gap: 7px;
 }
 
 .tecnologias span {
   padding: 5px 9px;
-
   border-radius: 6px;
-
   background: #334155;
-
   color: #cbd5e1;
-
   font-size: 11px;
   font-weight: 600;
 }
 
-/* ======================================================
+/* ============================================
    PROJETOS
-   ====================================================== */
+============================================ */
 
 #projetos {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  background: var(--background);
 }
 
-/* ======================================================
-   TÍTULO DA SEÇÃO
-   ====================================================== */
+/* ----- PROJETO DESTAQUE (SCRUMFLOW) ----- */
 
-#projetos .section-heading {
-  max-width: 760px;
-  margin: 0 auto 55px;
-  text-align: center;
+.project-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: var(--radius-large);
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  margin-bottom: 55px;
 }
 
-#projetos .section-label {
+.project-featured:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-featured-image {
+  min-height: 420px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.project-featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-featured:hover .project-featured-image img {
+  transform: scale(1.04);
+}
+
+.project-featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+}
+
+.project-badge {
   display: inline-block;
-  margin-bottom: 12px;
-
-  font-size: 13px;
+  width: fit-content;
+  margin-bottom: 14px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 2px;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
-#projetos .section-heading h2 {
-  margin-bottom: 16px;
+.project-badge-academic {
+  color: var(--primary);
 }
 
-#projetos .section-heading p {
-  margin: 0 auto;
+.project-badge-personal {
+  color: #8b5cf6;
+}
+
+.project-featured-content h3 {
+  font-size: 34px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.project-description {
+  color: var(--text-muted);
+  font-size: 15px;
   line-height: 1.7;
+  margin-bottom: 25px;
 }
 
-/* ======================================================
-   CARD BASE
-   ====================================================== */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.project-tech span {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--background);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ----- CONTRIBUIÇÕES EM CARDS ----- */
+
+.contributions-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.contributions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.contribution-card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--background-secondary);
+  transition: var(--transition);
+}
+
+.contribution-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-light);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.contribution-icon {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.contribution-card strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.contribution-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ----- PROJETOS SECUNDÁRIOS ----- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-
-  display: grid;
-
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-hover);
 }
 
-/* ======================================================
-   IMAGEM
-   ====================================================== */
-
-.project-image {
+.project-card-image {
+  height: 200px;
   overflow: hidden;
-  background: #f2f2f2;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-.project-image img {
-  display: block;
-
+.project-card-image img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.03);
+.project-card:hover .project-card-image img {
+  transform: scale(1.04);
 }
 
-/* ======================================================
-   PROJETO PRINCIPAL - SCRUMFLOW
-   ====================================================== */
-
-.project-card-featured {
-  grid-template-columns: 1fr 1fr;
-
-  min-height: 470px;
-
-  margin-bottom: 55px;
-}
-
-.project-card-featured .project-image {
-  min-height: 470px;
-}
-
-.project-card-featured .project-content {
-  padding: 45px;
-}
-
-.project-card-featured .project-content h3 {
-  margin: 8px 0 18px;
-
-  font-size: 34px;
-  line-height: 1.1;
-}
-
-.project-card-featured .project-description {
-  margin-bottom: 22px;
-
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-/* ======================================================
-   TIPO DO PROJETO
-   ====================================================== */
-
-.project-type {
-  display: inline-block;
-
-  margin-bottom: 6px;
-
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.5;
-
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-
-  opacity: 0.65;
-}
-
-/* ======================================================
-   TECNOLOGIAS
-   ====================================================== */
-
-.project-technologies {
+.coming-soon {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-
-  margin-bottom: 28px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
 }
 
-.project-technologies span {
-  display: inline-flex;
-  align-items: center;
+.coming-soon span {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
 
-  padding: 6px 10px;
-
-  border-radius: 6px;
-
-  background: var(--color-background);
-
-  font-size: 11px;
+.coming-soon p {
+  font-size: 14px;
   font-weight: 600;
 }
 
-/* ======================================================
-   CONTRIBUIÇÃO - SCRUMFLOW
-   ====================================================== */
-
-.project-contribution {
-  margin-top: 10px;
-}
-
-.project-contribution-label {
-  display: block;
-
-  margin-bottom: 15px;
-
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-}
-
-.contribution-item {
-  margin-bottom: 15px;
-}
-
-.contribution-item strong {
-  display: block;
-
-  margin-bottom: 4px;
-
-  font-size: 13px;
-}
-
-.contribution-item p {
-  margin: 0;
-
-  font-size: 12px;
-  line-height: 1.55;
-}
-
-/* ======================================================
-   BOTÕES
-   ====================================================== */
-
-.project-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-
-  margin-top: 25px;
-}
-
-.project-actions .btn {
-  padding: 10px 17px;
-
-  font-size: 12px;
-}
-
-/* ======================================================
-   GRADE DOS PROJETOS SECUNDÁRIOS
-   ====================================================== */
-
-.projects-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: 28px;
-
-  width: 100%;
-}
-
-/* ======================================================
-   CARDS SECUNDÁRIOS
-   ====================================================== */
-
-.project-card-secondary {
+.project-card-content {
   display: flex;
   flex-direction: column;
-
-  min-height: 0;
-}
-
-.project-card-secondary .project-image {
-  height: 210px;
-  min-height: 210px;
-}
-
-.project-card-secondary .project-content {
+  flex: 1;
   padding: 25px;
 }
 
-.project-card-secondary .project-content h3 {
-  margin: 5px 0 12px;
-
-  font-size: 25px;
-  line-height: 1.15;
-}
-
-.project-card-secondary .project-description {
-  margin-bottom: 18px;
-
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.project-card-secondary .project-type {
+.project-card-content .project-badge {
   font-size: 10px;
+  letter-spacing: 0.4px;
 }
 
-.project-card-secondary .project-technologies {
-  gap: 6px;
+.project-card-content h3 {
+  font-size: 22px;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.project-card-content .project-description {
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.project-card-content .project-tech {
   margin-bottom: 20px;
 }
 
-.project-card-secondary .project-technologies span {
-  padding: 5px 8px;
-
+.project-card-content .project-tech span {
   font-size: 10px;
+  padding: 4px 8px;
 }
 
-/* ======================================================
-   DESTAQUES DOS PROJETOS SECUNDÁRIOS
-   ====================================================== */
+/* ----- CONTRIBUIÇÕES MINI ----- */
 
-.project-highlights {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 15px;
-
-  margin-top: 5px;
+.contributions-mini {
+  margin-bottom: 20px;
 }
 
-.project-highlight {
-  padding: 13px;
-
-  border-radius: 9px;
-
-  background: var(--color-background);
-}
-
-.project-highlight strong {
+.contributions-mini strong {
   display: block;
-
-  margin-bottom: 5px;
-
-  font-size: 11px;
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 6px;
 }
 
-.project-highlight p {
-  margin: 0;
+.contributions-mini ul {
+  padding-left: 18px;
+}
 
-  font-size: 11px;
+.contributions-mini li {
+  font-size: 12px;
+  color: var(--text-muted);
   line-height: 1.5;
+  margin-bottom: 2px;
 }
 
-/* ======================================================
-   BOTÕES DOS CARDS SECUNDÁRIOS
-   ====================================================== */
-
-.project-card-secondary .project-actions {
-  margin-top: 20px;
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
 }
 
-.project-card-secondary .project-actions .btn {
-  padding: 8px 14px;
-
+.project-actions .btn-small {
   font-size: 11px;
-}
-
-/* ======================================================
-   TABLET
-   ====================================================== */
-
-@media (max-width: 1024px) {
-  .project-card-featured {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .project-card-featured .project-content {
-    padding: 35px;
-  }
-
-  .projects-grid {
-    gap: 22px;
-  }
-}
-
-/* ======================================================
-   MOBILE
-   ====================================================== */
-
-@media (max-width: 768px) {
-  #projetos {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  /* ScrumFlow */
-
-  .project-card-featured {
-    grid-template-columns: 1fr;
-
-    min-height: 0;
-
-    margin-bottom: 35px;
-  }
-
-  .project-card-featured .project-image {
-    height: 280px;
-    min-height: 280px;
-  }
-
-  .project-card-featured .project-content {
-    padding: 28px;
-  }
-
-  .project-card-featured .project-content h3 {
-    font-size: 30px;
-  }
-
-  /* Projetos secundários */
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-  }
-
-  .project-card-secondary .project-image {
-    height: 220px;
-    min-height: 220px;
-  }
-}
-
-/* ======================================================
-   CELULARES PEQUENOS
-   ====================================================== */
-
-@media (max-width: 480px) {
-  #projetos .section-heading {
-    margin-bottom: 40px;
-  }
-
-  .project-card-featured .project-image {
-    height: 220px;
-    min-height: 220px;
-  }
-
-  .project-card-featured .project-content {
-    padding: 22px;
-  }
-
-  .project-card-featured .project-content h3 {
-    font-size: 27px;
-  }
-
-  .project-card-secondary .project-image {
-    height: 190px;
-    min-height: 190px;
-  }
-
-  .project-card-secondary .project-content {
-    padding: 21px;
-  }
-
-  .project-card-secondary .project-content h3 {
-    font-size: 23px;
-  }
-
-  .project-highlights {
-    grid-template-columns: 1fr;
-  }
+  min-height: 36px;
+  padding: 0 14px;
 }
 
 /* ============================================
@@ -1052,80 +815,55 @@ img {
 
 .formacao-card {
   max-width: 850px;
-
   margin: 0 auto;
-
   display: grid;
-
   grid-template-columns: 120px 1fr;
-
   gap: 30px;
-
   padding: 35px;
-
   border: 1px solid var(--border);
-
   border-radius: var(--radius-large);
-
   background: var(--white);
 }
 
 .formacao-data {
   color: var(--primary);
-
   font-size: 20px;
   font-weight: 800;
 }
 
 .formacao-instituicao {
   display: inline-block;
-
   color: var(--primary);
-
   font-size: 13px;
   font-weight: 700;
-
   text-transform: uppercase;
-
   letter-spacing: 0.5px;
-
   margin-bottom: 8px;
 }
 
 .formacao-conteudo h3 {
   color: var(--dark);
-
   font-size: 23px;
-
   margin-bottom: 10px;
 }
 
 .formacao-conteudo p {
   color: var(--text-muted);
-
   font-size: 15px;
-
   margin-bottom: 18px;
 }
 
 .formacao-status {
   display: inline-block;
-
   padding: 6px 10px;
-
   border-radius: 6px;
-
   background: #eff6ff;
-
   color: var(--primary);
-
   font-size: 12px;
   font-weight: 700;
 }
 
-/* ============================================
-   CURSOS COMPLEMENTARES
-============================================ */
+/* ----- CURSOS ----- */
 
 .cursos-complementares {
   margin-top: 90px;
@@ -1137,60 +875,43 @@ img {
 
 .cursos-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 20px;
 }
 
 .curso-card {
   padding: 24px;
-
   border: 1px solid var(--border);
-
   border-radius: var(--radius);
-
   background: var(--white);
-
   transition: var(--transition);
 }
 
 .curso-card:hover {
   transform: translateY(-4px);
-
   border-color: #bfdbfe;
-
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
 }
 
 .curso-tipo {
   display: inline-block;
-
   margin-bottom: 12px;
-
   color: var(--primary);
-
   font-size: 11px;
   font-weight: 700;
-
   text-transform: uppercase;
-
   letter-spacing: 0.7px;
 }
 
 .curso-card h3 {
   color: var(--dark);
-
   font-size: 17px;
-
   line-height: 1.35;
-
   margin-bottom: 8px;
 }
 
 .curso-card p {
   color: var(--text-muted);
-
   font-size: 13px;
 }
 
@@ -1200,51 +921,37 @@ img {
 
 .contato-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 70px;
-
   align-items: center;
 }
 
 .contato-info h3,
 .contato-box h3 {
   font-size: 25px;
-
   margin-bottom: 12px;
 }
 
 .contato-info p,
 .contato-box p {
   color: #94a3b8;
-
   font-size: 16px;
-
   line-height: 1.7;
-
   margin-bottom: 25px;
 }
 
 .contato-links {
   display: flex;
-
   flex-direction: column;
-
   gap: 14px;
 }
 
 .contato-link {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   color: #cbd5e1;
-
   font-size: 14px;
-
   transition: var(--transition);
 }
 
@@ -1255,48 +962,30 @@ img {
 .contato-icon {
   width: 36px;
   height: 36px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   border-radius: 8px;
-
   background: var(--dark-secondary);
-
   color: var(--primary-light);
-
   font-size: 12px;
   font-weight: 800;
 }
 
-/* ============================================
-   CAIXA DE CONTATO
-============================================ */
-
 .contato-box {
   padding: 35px;
-
   border: 1px solid var(--dark-border);
-
   border-radius: var(--radius-large);
-
   background: var(--dark-secondary);
 }
 
 .contato-box-label {
   display: inline-block;
-
   color: var(--primary-light);
-
   font-size: 12px;
   font-weight: 700;
-
   text-transform: uppercase;
-
   letter-spacing: 1px;
-
   margin-bottom: 12px;
 }
 
@@ -1306,19 +995,14 @@ img {
 
 .footer {
   padding: 28px 0;
-
   text-align: center;
-
   background: #0b1120;
-
   border-top: 1px solid var(--dark-border);
-
   color: #64748b;
 }
 
 .footer p {
   font-size: 12px;
-
   margin-bottom: 4px;
 }
 
@@ -1327,9 +1011,10 @@ img {
 }
 
 /* ============================================
-   RESPONSIVIDADE — TABLET
+   RESPONSIVIDADE
 ============================================ */
 
+/* Tablet */
 @media (max-width: 1024px) {
   .hero-content {
     gap: 50px;
@@ -1339,7 +1024,7 @@ img {
     flex: 0 0 240px;
   }
 
-  .avatar-placeholder {
+  .avatar {
     width: 240px;
     height: 240px;
   }
@@ -1348,60 +1033,56 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .project-content {
-    padding: 35px;
-  }
-
-  .project-content h3 {
-    font-size: 30px;
-  }
-
-  .project-card-secondary {
-    width: 94%;
-  }
-
   .cursos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .project-featured {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-featured-content {
+    padding: 35px;
+  }
 }
 
-/* ============================================
-   RESPONSIVIDADE — CELULAR
-============================================ */
-
+/* Mobile */
 @media (max-width: 768px) {
-  /* NAVBAR */
-
-  .navbar-container {
-    flex-direction: column;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
+  /* Navbar */
+  .nav-toggle {
+    display: flex;
   }
 
   .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(15, 23, 42, 0.98);
+    padding: 20px 24px;
     gap: 16px;
+    transform: translateY(-110%);
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid var(--dark-border);
+  }
 
-    flex-wrap: wrap;
-
-    justify-content: center;
+  .nav-links.active {
+    transform: translateY(0);
   }
 
   .nav-links a {
-    font-size: 12px;
+    font-size: 16px;
   }
 
-  /* HERO */
-
+  /* Hero */
   .hero {
     padding: 150px 0 70px;
   }
 
   .hero-content {
     flex-direction: column;
-
     text-align: center;
-
     gap: 50px;
   }
 
@@ -1421,26 +1102,22 @@ img {
     flex: none;
   }
 
-  .avatar-placeholder {
+  .avatar {
     width: 190px;
     height: 190px;
   }
 
-  .avatar-placeholder span {
+  .avatar-initials {
     font-size: 52px;
   }
-
-  /* SEÇÕES */
 
   .section {
     padding: 75px 0;
   }
 
-  /* SOBRE */
-
+  /* Sobre */
   .sobre-grid {
     grid-template-columns: 1fr;
-
     gap: 40px;
   }
 
@@ -1448,7 +1125,7 @@ img {
     text-align: center;
   }
 
-  .sobre-detalhes {
+  .sobre-tags {
     justify-content: center;
   }
 
@@ -1456,441 +1133,48 @@ img {
     max-width: 400px;
   }
 
-  /* HABILIDADES */
-
+  /* Habilidades */
   .habilidades-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* ============================================
-   PROJETOS
-============================================ */
-
-  #projetos {
-    background: var(--background);
+  /* Projetos - Principal */
+  .project-featured {
+    grid-template-columns: 1fr;
+    margin-bottom: 35px;
   }
 
-  /* ============================================
-   CARD BASE
-============================================ */
-
-  .project-card {
-    overflow: hidden;
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius-large);
-
-    background: var(--white);
-
-    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
-
-    transition: var(--transition);
+  .project-featured-image {
+    min-height: 280px;
   }
 
-  .project-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+  .project-featured-content {
+    padding: 30px;
   }
 
-  /* ============================================
-   IMAGEM
-============================================ */
-
-  .project-image {
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-  }
-
-  .project-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-  }
-
-  .project-card:hover .project-image img {
-    transform: scale(1.03);
-  }
-
-  /* ============================================
-   PROJETO PRINCIPAL — SCRUMFLOW
-============================================ */
-
-  .project-card-featured {
-    display: grid;
-
-    grid-template-columns: 0.95fr 1.05fr;
-
-    min-height: 400px;
-
-    margin-bottom: 36px;
-  }
-
-  .project-card-featured .project-image {
-    min-height: 400px;
-  }
-
-  .project-card-featured .project-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 30px 36px;
-  }
-
-  .project-card-featured .project-type {
-    margin-bottom: 7px;
-
-    color: var(--primary);
-
-    font-size: 10px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .project-card-featured .project-content h3 {
-    margin-bottom: 10px;
-
-    color: var(--dark);
-
+  .project-featured-content h3 {
     font-size: 30px;
-    line-height: 1.1;
   }
 
-  .project-card-featured .project-description {
-    max-width: 520px;
-
-    margin-bottom: 14px;
-
-    color: var(--text-muted);
-
-    font-size: 13px;
-    line-height: 1.55;
+  .contributions-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
-  /* ============================================
-   TECNOLOGIAS
-============================================ */
-
-  .project-technologies {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 6px;
-
-    margin-bottom: 14px;
-  }
-
-  .project-technologies span {
-    padding: 4px 8px;
-
-    border: 1px solid var(--border);
-    border-radius: 6px;
-
-    background: var(--background);
-
-    color: var(--text-secondary);
-
-    font-size: 9px;
-    font-weight: 600;
-  }
-
-  /* ============================================
-   RESUMO / MINHA ATUAÇÃO
-============================================ */
-
-  .project-summary {
-    margin-bottom: 15px;
-
-    padding-left: 13px;
-
-    border-left: 3px solid var(--primary);
-  }
-
-  .project-summary strong {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: var(--text);
-
-    font-size: 11px;
-  }
-
-  .project-summary ul {
-    margin: 0;
-    padding-left: 15px;
-  }
-
-  .project-summary li {
-    margin-bottom: 3px;
-
-    color: var(--text-muted);
-
-    font-size: 11px;
-    line-height: 1.4;
-  }
-
-  .project-summary li:last-child {
-    margin-bottom: 0;
-  }
-
-  /* ============================================
-   BOTÕES
-============================================ */
-
-  .project-actions {
-    display: flex;
-    align-items: center;
-
-    gap: 9px;
-  }
-
-  .project-actions .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 38px;
-
-    padding: 0 15px;
-
-    font-size: 11px;
-  }
-
-  /* BOTÃO SECUNDÁRIO */
-
-  .project-actions .btn-secondary {
-    color: var(--text-secondary);
-
-    border-color: var(--border);
-
-    background: var(--white);
-  }
-
-  .project-actions .btn-secondary:hover {
-    color: var(--primary);
-
-    border-color: var(--primary);
-
-    background: #eff6ff;
-  }
-
-  /* ============================================
-   PROJETOS SECUNDÁRIOS
-============================================ */
-
+  /* Projetos - Secundários */
   .projects-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  /* ============================================
-   CARDS SECUNDÁRIOS
-============================================ */
-
-  .project-card-secondary {
-    display: flex;
-    flex-direction: column;
-
-    min-width: 0;
+  .project-card-image {
+    height: 220px;
   }
 
-  .project-card-secondary .project-image {
-    height: 165px;
-    min-height: 165px;
-  }
-
-  .project-card-secondary .project-content {
-    display: flex;
-    flex-direction: column;
-
-    flex: 1;
-
-    padding: 19px;
-  }
-
-  .project-card-secondary .project-type {
-    margin-bottom: 6px;
-
-    color: var(--primary);
-
-    font-size: 9px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-  }
-
-  .project-card-secondary .project-content h3 {
-    margin-bottom: 7px;
-
-    color: var(--dark);
-
-    font-size: 21px;
-    line-height: 1.15;
-  }
-
-  .project-card-secondary .project-description {
-    margin-bottom: 12px;
-
-    color: var(--text-muted);
-
-    font-size: 11px;
-    line-height: 1.45;
-  }
-
-  /* ============================================
-   TECNOLOGIAS — SECUNDÁRIOS
-============================================ */
-
-  .project-card-secondary .project-technologies {
-    gap: 5px;
-
-    margin-bottom: 12px;
-  }
-
-  .project-card-secondary .project-technologies span {
-    padding: 4px 7px;
-
-    font-size: 8px;
-  }
-
-  /* ============================================
-   RESUMO — SECUNDÁRIOS
-============================================ */
-
-  .project-card-secondary .project-summary {
-    margin-bottom: 14px;
-  }
-
-  .project-card-secondary .project-summary strong {
-    font-size: 10px;
-  }
-
-  .project-card-secondary .project-summary li {
-    font-size: 10px;
-    line-height: 1.35;
-  }
-
-  /* ============================================
-   BOTÕES — SECUNDÁRIOS
-============================================ */
-
-  .project-card-secondary .project-actions {
-    margin-top: auto;
-  }
-
-  .project-card-secondary .project-actions .btn {
-    min-height: 35px;
-
-    padding: 0 12px;
-
-    font-size: 10px;
-  }
-
-  /* ============================================
-   TABLET
-============================================ */
-
-  @media (max-width: 1024px) {
-    .project-card-featured .project-content {
-      padding: 27px;
-    }
-
-    .project-card-featured .project-content h3 {
-      font-size: 27px;
-    }
-  }
-
-  /* ============================================
-   CELULAR
-============================================ */
-
-  @media (max-width: 768px) {
-    /* SCRUMFLOW */
-
-    .project-card-featured {
-      grid-template-columns: 1fr;
-
-      min-height: 0;
-
-      margin-bottom: 28px;
-    }
-
-    .project-card-featured .project-image {
-      height: 250px;
-      min-height: 250px;
-    }
-
-    .project-card-featured .project-content {
-      padding: 26px;
-    }
-
-    /* PROJETOS SECUNDÁRIOS */
-
-    .projects-grid {
-      grid-template-columns: 1fr;
-
-      gap: 20px;
-    }
-
-    .project-card-secondary .project-image {
-      height: 210px;
-      min-height: 210px;
-    }
-  }
-
-  /* ============================================
-   CELULAR PEQUENO
-============================================ */
-
-  @media (max-width: 480px) {
-    .project-card-featured .project-image {
-      height: 200px;
-      min-height: 200px;
-    }
-
-    .project-card-featured .project-content {
-      padding: 22px 19px;
-    }
-
-    .project-card-featured .project-content h3 {
-      font-size: 25px;
-    }
-
-    .project-card-secondary .project-image {
-      height: 180px;
-      min-height: 180px;
-    }
-
-    .project-card-secondary .project-content {
-      padding: 19px;
-    }
-
-    .project-actions {
-      flex-wrap: wrap;
-    }
-  }
-
-  /* FORMAÇÃO */
-
+  /* Formação */
   .formacao-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
     padding: 25px;
   }
 
@@ -1898,9 +1182,94 @@ img {
     font-size: 20px;
   }
 
-  /* CONTATO */
+  .cursos-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* Contato */
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
 
   .contato-box {
     padding: 28px 22px;
+  }
+}
+
+/* Mobile Pequeno */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .habilidades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 29px;
+  }
+
+  /* Projetos */
+  .project-featured-content {
+    padding: 22px;
+  }
+
+  .project-featured-content h3 {
+    font-size: 27px;
+  }
+
+  .contributions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-content {
+    padding: 20px;
+  }
+
+  .project-card-content h3 {
+    font-size: 20px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .btn-small {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Cursos */
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formacao-card {
+    padding: 20px;
+  }
+
+  .contato-box {
+    padding: 22px 18px;
   }
 }
