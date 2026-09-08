@@ -1,16 +1,18 @@
-# Portfólio de Projetos — FATEC Jacareí
+# Portfólio de Projetos - Fatec Jacareí
 
-## Marcello Parise Campbell Fonseca
-
-**Curso:** Desenvolvimento de Software Multiplataforma
-**Turma:** 2º Semestre de 2026
-
-## Portfólio Online
-
-Acesse meu portfólio de projetos desenvolvidos durante o curso de **Desenvolvimento de Software Multiplataforma** da FATEC Jacareí:
-
-🔗 **[Acessar o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613005/)**
+**Aluno:** Marcello Parise Campbell Fonseca  
+**Curso:** Desenvolvimento de Software Multiplataforma  
+**Turma:** 2º Semestre - 2026
 
 ---
 
-**FATEC Jacareí — Desenvolvimento de Software Multiplataforma**
+**Portfólio Online**
+
+🔗 [Acessar o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613005/)
+---
+
+**Vídeos de Apresentação**
+
+🎤 2DSM - [Vídeo](LINK_VIDEO_2DSM)  
+🎤 4DSM - [Vídeo](LINK_VIDEO_4DSM)  
+🎤 6DSM - [Vídeo](LINK_VIDEO_6DSM)
