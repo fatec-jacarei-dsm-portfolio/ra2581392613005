@@ -564,13 +564,10 @@ img {
 .project-main-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  object-fit: contain;
+  padding: 20px;
 }
 
-.project-main:hover .project-main-image img {
-  transform: scale(1.03);
-}
 
 /* ============================================
    SCRUMFLOW - CONTEÚDO
@@ -841,12 +838,12 @@ img {
 .project-secondary-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  object-fit: contain;
+  padding: 15px;
 }
 
 .project-secondary:hover .project-secondary-image img {
-  transform: scale(1.03);
+  transform: none;
 }
 
 /* ============================================
