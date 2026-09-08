@@ -1,8 +1,8 @@
 # Portfólio de Projetos - Fatec Jacareí
 
-**Aluno:** [nome do aluno]  
+**Aluno:** Marcello Parise Campbell Fonseca  
 **Curso:** Desenvolvimento de Software Multiplataforma  
-**Turma:** [semestre e ano de ingresso]
+**Turma:** 2º Semestre - 2026
 
 ---
 
