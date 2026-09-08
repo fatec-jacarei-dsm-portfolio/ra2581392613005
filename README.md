@@ -1,16 +1,14 @@
-# Portfólio de Projetos — FATEC Jacareí
+Portfólio de Projetos - Fatec Jacareí
+Aluno: Gustavo Koiti Yoshimura
+Curso: Desenvolvimento de Software Multiplataforma
+Turma: 1º semestre de 2026
 
-## Marcello Parise Campbell Fonseca
-
-**Curso:** Desenvolvimento de Software Multiplataforma
-**Turma:** 2º Semestre de 2026
-
-## Portfólio Online
-
-Acesse meu portfólio de projetos desenvolvidos durante o curso de **Desenvolvimento de Software Multiplataforma** da FATEC Jacareí:
+Portfólio Online
 
 🔗 **[Acessar o Portfólio](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613005/)**
 
----
+Vídeos de Apresentação
 
-**FATEC Jacareí — Desenvolvimento de Software Multiplataforma**
+🎤 2DSM - Vídeo
+🎤 4DSM - Vídeo
+🎤 6DSM - Vídeo
