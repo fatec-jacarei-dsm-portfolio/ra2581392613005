@@ -556,37 +556,23 @@ img {
 ============================================ */
 
 .project-main-image {
-    position: relative;
     min-height: 480px;
     overflow: hidden;
     background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-main-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    min-height: 480px;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
     display: block;
+    flex-shrink: 0;
 }
-
-/* Fallback se a imagem não carregar */
-.project-main-image::after {
-    content: "ScrumFlow";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #64748b;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    opacity: 0.5;
-}
-
 
 /* ============================================
    SCRUMFLOW - CONTEÚDO
@@ -846,25 +832,25 @@ img {
 /* ============================================
    IMAGEM DOS PROJETOS SECUNDÁRIOS
 ============================================ */
-
 .project-secondary-image {
-    position: relative;
     height: 200px;
     flex-shrink: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-secondary-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    min-height: 200px;
     object-fit: cover;
-    object-position: center;
+    object-position: top center;
     display: block;
     transition: transform 0.5s ease;
+    flex-shrink: 0;
 }
 
 .project-secondary:hover .project-secondary-image img {
