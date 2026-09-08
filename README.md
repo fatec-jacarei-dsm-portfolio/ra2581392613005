@@ -1,5 +1,6 @@
 Portfólio de Projetos - Fatec Jacareí
-Aluno: Gustavo Koiti Yoshimura
+
+Aluno: Marcello Parise Campbell Fonseca
 Curso: Desenvolvimento de Software Multiplataforma
 Turma: 1º semestre de 2026
 
