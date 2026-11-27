@@ -2,7 +2,7 @@
 
 **Aluno:** Marcello Parise Campbell Fonseca  
 **Curso:** Desenvolvimento de Software Multiplataforma  
-**Turma:** 2º Semestre - 2026
+**Turma:** 1º Semestre - 2026
 
 ---
 
