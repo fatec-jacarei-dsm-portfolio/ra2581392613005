@@ -13,4 +13,4 @@
 
 **Vídeos de Apresentação**
 
-🎤 2DSM - [Vídeo](https://fatec-jacarei-dsm-portfolio.github.io/ra2581392613005/assets/video/apresentacao.mp4)  
+🎤 2DSM - [Vídeo no YouTube](https://youtube.com/shorts/OlDIidecYR8?feature=share)  
