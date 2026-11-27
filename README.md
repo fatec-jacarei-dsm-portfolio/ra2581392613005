@@ -13,4 +13,4 @@
 
 **Vídeos de Apresentação**
 
-🎤 2DSM - [Vídeo no YouTube](https://youtube.com/shorts/OlDIidecYR8?feature=share)  
+🎤 2DSM - [Vídeo](https://youtube.com/shorts/OlDIidecYR8?feature=share)  
